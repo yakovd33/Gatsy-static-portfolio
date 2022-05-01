@@ -1,0 +1,80 @@
+// Header
+header#main-header
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    padding: 30px 0
+    transition: $transition
+    z-index: 9999999
+
+    &.sticky
+        background-color: rgba(0, 0, 0, 0.99)
+        margin-top: 0
+        box-shadow: $black-box-shadow
+
+
+    #main-header-wrap
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        #header-left
+            width: 60%
+            display: flex
+            align-items: center
+
+            #header-logo img
+                height: 40px
+                margin-top: 10px
+
+            #header-links
+                display: flex
+                margin-left: 50px
+
+                .header-link
+                    color: #fff
+                    margin-right: 15px
+                    font-weight: 600
+                    position: relative
+                    cursor: pointer
+                    transition: $transition
+
+                    &.active
+                        color: $base-color
+                        // border-bottom: 2px solid $base-color
+                        margin-right: 25px
+                        position: relative
+                        text-shadow: 0 0 34px #f9004d
+
+                        &::after
+                            content: ""
+                            position: absolute
+                            height: 7px
+                            width: 7px
+                            border-radius: 50%
+                            background-color: $base-color
+                            top: 25px
+                            left: 50%
+                            transform: translateX(-50%)
+
+                        .underscore-hidden
+                            display: none
+                    
+                    .underscore-hidden
+                        opacity: 0
+
+                    &:hover
+                        color: $base-color
+                        text-shadow: 0 0 34px #f9004d
+
+                    &:hover .underscore-hidden
+                        opacity: 1
+                        animation-name: flicker
+                        animation-duration: .7s
+                        animation-iteration-count: infinite
+        #header-right
+            #header-contact-btn-wrap
+                .cute-btn
+                    font-size: 0.8rem
+                    font-weight: bold

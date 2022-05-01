@@ -1,0 +1,196 @@
+@import 'main.sass'
+@import 'animations.sass'
+@import 'header.sass'
+@import 'footer.sass'
+
+body
+    font-family: 'Poppins', sans-serif
+
+// Home
+// Hero Section
+#hero-section
+    background-image: url("/static/images/hero-bg.png")
+    height: 100vh
+    display: block
+    background-size: cover
+    color: #fff
+
+    #hero-section-textuals
+        padding-top: 230px
+
+        #welcome-sup-msg
+            color: #BBBBBB
+            margin-bottom: 10px
+
+        #my-name-hero-title, #my-pro-hero-title
+            font-size: 2.8rem
+            font-weight: 600
+            position: relative
+            text-shadow: 0 0 10px #141414
+
+            #hero-title-placeholder
+                visibility: hidden
+
+            #hero-title-old
+                position: absolute
+                animation-name: titleup
+                animation-duration: 1s
+
+            #hero-title-new
+                position: absolute
+                opacity: 0
+                bottom: -100%
+                // animation-name: titlenew
+                // animation-delay: 1s
+                // animation-duration: 1s
+
+            #hero-title-static
+                position: absolute
+                top: 0
+
+                &.animate
+                    animation-name: titleup
+                    animation-duration: 1s
+        
+        #my-name-hero-title
+            display: inline-block
+            
+            &:after
+                content: ""
+                height: 60px
+                width: 60px
+                background-image: url("/static/images/sphere.png")
+                background-size: cover
+                position: absolute
+                top: -10px
+                left: -25px
+                z-index: 998
+
+            span:not(#name-hidden)
+                position: absolute
+                z-index: 999
+
+            #name-hidden
+                visibility: hidden
+        
+        #my-pro-hero-title
+            color: $base-color
+            margin-top: -10px
+
+        #hero-paragraph
+            max-width: 500px
+            font-size: 0.9rem
+            margin-top: 20px
+
+    .mouse-scroll
+        position: absolute
+        text-align: center
+        left: 0
+        right: 0
+        bottom: 20px
+        width: 225px
+        height: 100px
+        padding-top: 15px
+        margin-left: auto
+        margin-right: auto
+        user-select: none
+        transform: scale(0.75)
+        cursor: pointer
+
+        span
+            pointer-events: none
+            font-weight: 400 !important
+            text-transform: none !important
+            letter-spacing: normal !important
+            top: 6px
+            position: relative
+            color: #fff
+            opacity: 0.5
+            font-size: 0.9rem
+            user-select: none
+
+        .mouse
+            width: 24px
+            height: 45px
+            display: flex
+            align-items: center
+            justify-content: center
+            border: 2px solid #fff
+            border-radius: 100px
+            box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2)
+            margin: auto auto 8px
+            animation: mouse 1.35s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
+
+            &:active, &:focus
+                animation-play-state: paused
+
+                span
+                animation-play-state: paused
+
+            span
+                width: 6px
+                height: 6px
+                position: relative
+                transform: translateY(-10px)
+                background: #e91e63
+                border-radius: 100%
+                animation: mouseScroll 1.35s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
+
+// Testimonials section
+#testimonials-section
+    background-color: #fcfbfe
+
+    #testimonials-wrap
+        padding: 10px 0
+
+        .slick-prev
+            bottom: 0
+            top: auto
+            right: 80px
+            left: auto
+
+        .slick-next
+            bottom: 0
+            top: auto
+            right: 50px
+            left: auto
+
+        .slick-prev:before, .slick-next:before
+            color: red
+
+        .slick-list
+            padding: 20px 0
+
+            .slick-track > div:nth-child(2n + 1)
+                    margin-top: 60px
+
+        .testimonial-item
+            background-color: #fff
+            padding: 40px
+            margin: 30px
+            border-radius: 20px
+            box-shadow: 0 0 40px #c3c3c33b
+            color: #94a3bf
+
+            .text
+                font-size: 0.9em
+                line-height: 2rem
+
+            .details
+                display: flex
+                align-items: center
+                margin-top: 25px
+
+                .pp
+                    img
+                        height: 50px
+                        width: 50px
+                        border-radius: 50%
+                .textual
+                    margin-left: 15px
+
+                    .name
+                        font-weight: bold
+                        color: #666
+                    
+
