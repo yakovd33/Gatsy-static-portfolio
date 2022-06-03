@@ -20,7 +20,7 @@ header#main-header
         align-items: center
 
         #header-left
-            width: 60%
+            flex-grow: 1
             display: flex
             align-items: center
 
@@ -30,7 +30,7 @@ header#main-header
 
             #header-links
                 display: flex
-                margin-left: 50px
+                margin-left: auto
 
                 .header-link
                     color: #fff
@@ -39,34 +39,25 @@ header#main-header
                     position: relative
                     cursor: pointer
                     transition: $transition
+                    font-size: 0.7rem
 
                     &.active
                         color: $base-color
                         // border-bottom: 2px solid $base-color
                         margin-right: 25px
                         position: relative
-                        text-shadow: 0 0 34px #f9004d
-
-                        &::after
-                            content: ""
-                            position: absolute
-                            height: 7px
-                            width: 7px
-                            border-radius: 50%
-                            background-color: $base-color
-                            top: 25px
-                            left: 50%
-                            transform: translateX(-50%)
+                        text-shadow: 0 0 34px #fb9700
 
                         .underscore-hidden
                             display: none
                     
                     .underscore-hidden
                         opacity: 0
+                        margin-left: -5px
 
                     &:hover
                         color: $base-color
-                        text-shadow: 0 0 34px #f9004d
+                        text-shadow: 0 0 34px #fb9700
 
                     &:hover .underscore-hidden
                         opacity: 1
@@ -76,5 +67,12 @@ header#main-header
         #header-right
             #header-contact-btn-wrap
                 .cute-btn
-                    font-size: 0.8rem
+                    font-size: 0.7rem
                     font-weight: bold
+                    background-color: transparent
+                    border: 1px solid $base-color
+                    transition: 0.3s ease-in-out
+
+                    &:hover
+                        background-color: $base-color
+                        color: #000

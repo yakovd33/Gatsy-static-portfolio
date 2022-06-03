@@ -3,9 +3,6 @@
 @import 'header.sass'
 @import 'footer.sass'
 
-body
-    font-family: 'Poppins', sans-serif
-
 // Home
 // Hero Section
 #hero-section
@@ -54,17 +51,6 @@ body
         
         #my-name-hero-title
             display: inline-block
-            
-            &:after
-                content: ""
-                height: 60px
-                width: 60px
-                background-image: url("/static/images/sphere.png")
-                background-size: cover
-                position: absolute
-                top: -10px
-                left: -25px
-                z-index: 998
 
             span:not(#name-hidden)
                 position: absolute
@@ -132,7 +118,7 @@ body
                 height: 6px
                 position: relative
                 transform: translateY(-10px)
-                background: #e91e63
+                background: #fb9700
                 border-radius: 100%
                 animation: mouseScroll 1.35s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
 

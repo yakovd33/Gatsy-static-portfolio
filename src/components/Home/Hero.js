@@ -17,11 +17,11 @@ const Hero = () => {
         setMouseY((window.innerHeight - e.clientY * 5) / 99);
         // setMouseY(e.clientY);
 
-        var sphere = document.getElementById('sphere');
+        // var sphere = document.getElementById('sphere');
 
-        if (sphere) {
-            sphere.style.transform = 'rotate(340deg)'
-        }
+        // if (sphere) {
+        //     sphere.style.transform = 'rotate(340deg)'
+        // }
     }
 
     useEffect(() => {
