@@ -26,7 +26,6 @@ const Header = () => {
 
                         <div id="header-links">
                             <div className="header-link active">HELLO <span className="underscore-hidden">_</span></div>
-                            <div className="header-link">ABOUT <span className="underscore-hidden">_</span></div>
                             <div className="header-link">SERVICES <span className="underscore-hidden">_</span></div>
                             <div className="header-link">PORTFOLIO <span className="underscore-hidden">_</span></div>
                             <div className="header-link">BLOG <span className="underscore-hidden">_</span></div>

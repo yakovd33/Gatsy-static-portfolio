@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import Hero from '../components/Home/Hero';
 import About from '../components/Home/About';
@@ -9,20 +9,38 @@ import Blog from '../components/Home/Blog';
 import Newsletter from '../components/Newsletter';
 import Footer from '../components/Footer';
 import '../styles/home.sass';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import { Triangle } from 'react-loader-spinner'
 
 const IndexPage = () => {
-  return (
-	<Layout>
-		<Hero/>
-		<About/>
-		<Quote/>
-		<Testimonials/>
-		<Projects/>
-		<Newsletter/>
-		<Blog/>
-		<Footer/>
-	</Layout>
-  )
+	const [didLoad, setDidLoad] = useState(false);
+
+	useEffect(() => {
+		setTimeout(() => {
+			setDidLoad(true)
+		}, 1000)
+	}, []);
+
+	return (
+		<>
+			{ !didLoad && 
+				<div id="website-loading-animation">
+					<Triangle color="#fb9700" height={80} width={80} />
+				</div>
+			}
+
+			{ didLoad && <Layout>
+				<Hero />
+				<Projects />
+				<About />
+				<Quote />
+				<Testimonials />
+				<Newsletter />
+				<Blog />
+				<Footer />
+			</Layout> }
+		</>
+	)
 }
 
 export default IndexPage

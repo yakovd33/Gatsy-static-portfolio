@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { BiPlay } from 'react-icons/bi'
 
 const titles = [
     'Program Developer',
@@ -76,6 +77,10 @@ const Hero = () => {
                         </div>
 
                         <div id="hero-paragraph">I use animation as a third dimension by which to simplify experiences and kuiding thro each and every interaction. I’m not adding motion just to spruce things up, but doing it in ways that.</div>
+                        <div id="hero-buttons">
+                            <a href="#" className="hero-btn active">CONTACT ME</a>
+                            <a href="#" className="hero-btn">MY RESUME <BiPlay/></a>
+                        </div>
                     </div>
 
                     <div id="hero-section-scroll-guide">
