@@ -1,5 +1,7 @@
 import React from 'react';
 import ProjectListItem from './ProjectListItem';
+import { AiFillGithub } from 'react-icons/ai';
+import { FiExternalLink } from 'react-icons/fi';
 
 const Projects = () => {
     return ( 
@@ -18,6 +20,7 @@ const Projects = () => {
                                 </>
                             }
                             tags={ [ 'Next.js', 'Express.js', 'Postgres', 'TypeScript' ] }
+                            links={ [ { url: "https://google.com", icon: <AiFillGithub/> }, { url: "", icon: <FiExternalLink/> } ] }
                         />
 
                         <ProjectListItem
@@ -29,6 +32,7 @@ const Projects = () => {
                                 </>
                             }
                             tags={ [ 'Next.js', 'Express.js', 'Postgres', 'TypeScript' ] }
+                            links={ [ { url: "https://google.com", icon: <AiFillGithub/> }, { url: "", icon: <FiExternalLink/> } ] }
                             reverse={ true }
                         />
 
@@ -41,6 +45,7 @@ const Projects = () => {
                                 </>
                             }
                             tags={ [ 'Next.js', 'Express.js', 'Postgres', 'TypeScript' ] }
+                            links={ [ { url: "https://google.com", icon: <AiFillGithub/> }, { url: "", icon: <FiExternalLink/> } ] }
                         />
                     </div>
                 </div>

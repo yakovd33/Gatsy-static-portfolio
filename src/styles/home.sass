@@ -260,15 +260,35 @@
                     font-size: 0.7rem
                     font-weight: normal
 
+                .project-tags
+                    margin-top: 130px
+
+                    .project-tag
+                        margin-left: 10px
+                        font-size: 0.65rem
+                        color: #d2d2d2
+                        opacity: 0.8
+
             .project-item-left
                 img
                     filter: grayscale(100%)
-                    transition: 0.3s ease-in-out
+                    transition: 0.2s ease-in-out
                     width: 100%
                     cursor: pointer
 
-            &:hover .project-item-left
-                filter: grayscale(0)
+            .project-links
+                margin-top: 20px
+                
+                .project-link
+                    margin-left: 5px
+                    font-size: 1.3rem
+                    transition: 0.3s ease-in-out
+
+                    &:hover
+                        color: #fff
+
+            &:hover .project-item-left img
+                filter: grayscale(0) !important
 
 // Small contact box
 #small-contact-box-wrap
