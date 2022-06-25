@@ -11,6 +11,7 @@ import Footer from '../components/Footer';
 import '../styles/home.sass';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { Triangle } from 'react-loader-spinner'
+import SmallContactBox from "../components/Home/SmallContactBox";
 
 const IndexPage = () => {
 	const [didLoad, setDidLoad] = useState(false);
@@ -32,6 +33,7 @@ const IndexPage = () => {
 			{ didLoad && <Layout>
 				<Hero />
 				<Projects />
+				<SmallContactBox/>
 				<About />
 				<Quote />
 				<Testimonials />

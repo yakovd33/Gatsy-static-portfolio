@@ -138,7 +138,7 @@
                 animation-play-state: paused
 
                 span
-                animation-play-state: paused
+                    animation-play-state: paused
 
             span
                 width: 6px
@@ -209,7 +209,8 @@
 // Projects section
 #projects-section
     background-color: #121212
-    padding: 50px 0
+    padding: 80px 0
+    padding-bottom: 120px
     color: #fff
 
     #project-list-container
@@ -258,13 +259,82 @@
                     background-color: #1e1e1e
                     font-size: 0.7rem
                     font-weight: normal
-        
-        .project-item-left
-            img
-                filter: grayscale(100%)
+
+            .project-item-left
+                img
+                    filter: grayscale(100%)
+                    transition: 0.3s ease-in-out
+                    width: 100%
+                    cursor: pointer
+
+            &:hover .project-item-left
+                filter: grayscale(0)
+
+// Small contact box
+#small-contact-box-wrap
+    position: relative
+
+    #small-contact-box
+        position: absolute
+        top: -70px
+        left: 50%
+        transform: translateX(-50%)
+        height: 140px
+        width: 100%
+        max-width: 1100px
+        background-color: #080808
+        box-shadow: 0 0 40px #000000bf
+        border-radius: 30px
+        display: flex
+        align-items: center
+        padding: 0 60px
+        box-sizing: border-box
+        justify-content: space-between
+        transition: 0.3s ease-in-out
+
+        &:hover
+            background-color: $base-color
+
+            &:hover #small-contact-box-text
+                color: #000
+
+            &:hover #small-contact-box-right a
+                color: #000
+                background-color: #000
+                color: #fff
+            
+            &:hover #small-contact-box-right .download-cv-btn
+                background-color: transparent
+                color: #000
+
+        #small-contact-box-text
+            color: #fff
+            text-transform: uppercase
+            font-weight: bold
+            transition: 0.3s ease-in-out
+
+        #small-contact-box-right
+            a
+                font-size: 0.8rem
+                color: #000
+                font-weight: bold
                 transition: 0.3s ease-in-out
-                width: 100%
-                cursor: pointer
 
                 &:hover
-                    filter: grayscale(0)
+                    background-color: #fff !important
+                    color: #000 !important
+
+            .download-cv-btn
+                margin-right: 15px
+                color: #fff
+
+                &:hover
+                    text-decoration: underline
+                    background-color: transparent !important
+
+
+// About me section
+#about-me-section
+    padding: 80px 0
+    padding-top: 120px
+    background-color: #000
