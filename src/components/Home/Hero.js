@@ -76,7 +76,9 @@ const Hero = () => {
                             <div id="hero-title-placeholder">----</div>
                         </div>
 
-                        <div id="hero-paragraph">I use animation as a third dimension by which to simplify experiences and kuiding thro each and every interaction. I’m not adding motion just to spruce things up, but doing it in ways that.</div>
+                        <div id="hero-paragraph">
+                        As a fullstack developer and programmer, I have a strong foundation in both front-end and back-end technologies. I am a detail-oriented problem solver experienced in creating fullstack applications and software and enjoy working on projects from conception to deployment. With a passion for building intuitive and user-friendly websites and applications, I am constantly learning and staying up-to-date with the latest development trends and best practices. Let's create something great together!
+                        </div>
                         <div id="hero-buttons">
                             <a href="#" className="hero-btn active">CONTACT ME</a>
                             <a href="#" className="hero-btn">MY RESUME <BiPlay/></a>

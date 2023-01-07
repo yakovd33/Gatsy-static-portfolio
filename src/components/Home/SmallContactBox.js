@@ -6,7 +6,7 @@ const SmallContactBox = () => {
     <div id="small-contact-box-wrap" className="container">
         <div id="small-contact-box">
             <div id="small-contact-box-left">
-                <div id="small-contact-box-text">Seen to like my work so far?<br/>Would you like to work with me?</div>
+                <div id="small-contact-box-text">Seem to like my work so far?<br/>Would you like to work with me?</div>
                 (animate)
             </div>
 
