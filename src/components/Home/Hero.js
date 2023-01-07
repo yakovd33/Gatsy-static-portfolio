@@ -63,7 +63,7 @@ const Hero = () => {
     }`;
 
 
-    return ( 
+    return (
         <div id="hero-section">
             <div className="container">
                 <div id="hero-section-content">
