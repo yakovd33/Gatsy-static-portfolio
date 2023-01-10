@@ -77,7 +77,7 @@ const Hero = () => {
                         </div>
 
                         <div id="hero-paragraph">
-                        As a fullstack developer and programmer, I have a strong foundation in both front-end and back-end technologies. I am a detail-oriented problem solver experienced in creating fullstack applications and software and enjoy working on projects from conception to deployment. With a passion for building intuitive and user-friendly websites and applications, I am constantly learning and staying up-to-date with the latest development trends and best practices. Let's create something great together!
+                            I’m a fullstack developer and a programmer with a strong foundation in both front-end and back-end technologies. I am a detail-oriented problem solver experienced in creating fullstack applications and software and enjoy working on projects from conception to deployment. With a passion for building intuitive and user-friendly websites and applications. I am constantly learning and staying up-to-date with the latest development trends and best practices.
                         </div>
                         <div id="hero-buttons">
                             <a href="#" className="hero-btn active">CONTACT ME</a>

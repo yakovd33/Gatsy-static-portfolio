@@ -7,7 +7,6 @@ const SmallContactBox = () => {
         <div id="small-contact-box">
             <div id="small-contact-box-left">
                 <div id="small-contact-box-text">Seem to like my work so far?<br/>Would you like to work with me?</div>
-                (animate)
             </div>
 
             <div id="small-contact-box-right">
