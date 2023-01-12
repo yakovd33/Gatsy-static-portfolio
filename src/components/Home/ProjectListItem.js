@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ProjectListItem = ({ reverse, img, title, description, tags, links }) => {
+const ProjectListItem = ({ reverse, img, title, description, tags, links, type = "image", height = 'auto', width = 'auto' }) => {
   return (
     <div className={ `projects-list-item ${ reverse ? 'reverse' : '' }` }>
         <div className="project-item-right">
@@ -18,7 +18,7 @@ const ProjectListItem = ({ reverse, img, title, description, tags, links }) => {
 
             <div className="project-links">
                 { links && links.map((link) => (
-                    <a className="project-link" href={ link.url }>{ link.icon }</a>
+                    <a className="project-link" target="_blank" href={ link.url }>{ link.icon }</a>
                 )) }
                 
                 <a className="project-link"></a>
@@ -26,7 +26,15 @@ const ProjectListItem = ({ reverse, img, title, description, tags, links }) => {
         </div>
 
         <div className="project-item-left">
-            <img src={ img }/>
+            { type == 'image' && (
+                <img src={ img } style={{height, width}}/>
+            ) }
+
+            { type == 'video' && (
+                <video autoplay="autoplay" loop muted style={{height, width}}>
+                    <source src={img} type="video/mp4"/>
+                </video>
+            ) }
         </div>
     </div>
   )

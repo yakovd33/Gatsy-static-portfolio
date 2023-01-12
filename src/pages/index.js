@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 import '../styles/home.sass';
 import { Triangle } from 'react-loader-spinner'
 import SmallContactBox from "../components/Home/SmallContactBox";
+import { Helmet } from "react-helmet";
 
 const IndexPage = () => {
 	const [didLoad, setDidLoad] = useState(false);
@@ -20,9 +21,13 @@ const IndexPage = () => {
 
 	return (
 		<>
+			<Helmet>
+				<title>Yakov Code - Fullstack developer | Programmer | Freelancer</title>
+			</Helmet>
+
 			{ !didLoad &&
 				<div id="website-loading-animation">
-					<Triangle color="#fb9700" height={80} width={80} />
+					<Triangle color="#29ecba" height={80} width={80} />
 				</div>
 			}
 

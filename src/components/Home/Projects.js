@@ -24,8 +24,36 @@ const Projects = () => {
                         />
 
                         <ProjectListItem
-                            img="/static/images/projects/bingetracker.jpeg"
+                            img="/static/images/projects/bingetracker.mp4"
+                            type="video"
                             title="BingeTracker"
+                            description={
+                                <>
+                                     A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on <a href="#">Visual Studio Marketplace</a>, Package Control, <a href="#">Atom Package Manager</a>, and npm.
+                                </>
+                            }
+                            // height="20vw"
+                            // width="34vw"
+                            tags={ [ 'Next.js', 'Express.js', 'Postgres', 'TypeScript' ] }
+                            links={ [ { url: "https://github.com/yakovd33/BingeTracker", icon: <AiFillGithub/> }, { url: "https://binge-tracker.vercel.app/shows", icon: <FiExternalLink/> } ] }
+                            reverse={ true }
+                        />
+
+                        <ProjectListItem
+                            img="/static/images/projects/bingetracker.jpeg"
+                            title="AlphaDate"
+                            description={
+                                <>
+                                     A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on <a href="#">Visual Studio Marketplace</a>, Package Control, <a href="#">Atom Package Manager</a>, and npm.
+                                </>
+                            }
+                            tags={ [ 'Next.js', 'Express.js', 'Postgres', 'TypeScript' ] }
+                            links={ [ { url: "https://google.com", icon: <AiFillGithub/> }, { url: "", icon: <FiExternalLink/> } ] }
+                        />
+
+                        <ProjectListItem
+                            img="/static/images/projects/bingetracker.jpeg"
+                            title="Giver Getter"
                             description={
                                 <>
                                      A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on <a href="#">Visual Studio Marketplace</a>, Package Control, <a href="#">Atom Package Manager</a>, and npm.
@@ -34,18 +62,6 @@ const Projects = () => {
                             tags={ [ 'Next.js', 'Express.js', 'Postgres', 'TypeScript' ] }
                             links={ [ { url: "https://google.com", icon: <AiFillGithub/> }, { url: "", icon: <FiExternalLink/> } ] }
                             reverse={ true }
-                        />
-
-                        <ProjectListItem
-                            img="/static/images/projects/bingetracker.jpeg"
-                            title="BingeTracker"
-                            description={
-                                <>
-                                     A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on <a href="#">Visual Studio Marketplace</a>, Package Control, <a href="#">Atom Package Manager</a>, and npm.
-                                </>
-                            }
-                            tags={ [ 'Next.js', 'Express.js', 'Postgres', 'TypeScript' ] }
-                            links={ [ { url: "https://google.com", icon: <AiFillGithub/> }, { url: "", icon: <FiExternalLink/> } ] }
                         />
                     </div>
                 </div>

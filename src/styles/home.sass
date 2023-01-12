@@ -145,7 +145,7 @@
                 height: 6px
                 position: relative
                 transform: translateY(-10px)
-                background: #fb9700
+                background: #29ecba
                 border-radius: 100%
                 animation: mouseScroll 1.35s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
 
@@ -270,12 +270,14 @@
                         opacity: 0.8
 
             .project-item-left
-                img
-                    filter: grayscale(100%)
-                    transition: 0.2s ease-in-out
+                overflow: hidden
+                border-radius: 6px
+                img, video
+                    filter: grayscale(0)
+                    transition: 0.3s ease
                     width: 100%
                     cursor: pointer
-                    max-width: 40vw
+                    max-width: 35vw
 
             .project-links
                 margin-top: 20px
@@ -289,7 +291,8 @@
                         color: #fff
 
             &:hover .project-item-left img
-                filter: grayscale(0) !important
+                // filter: grayscale(100%) !important
+                transform: scale(1.1)
 
 // Small contact box
 #small-contact-box-wrap
