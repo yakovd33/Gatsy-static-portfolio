@@ -3,8 +3,7 @@ import Layout from "../components/Layout";
 import Hero from '../components/Home/Hero';
 import About from '../components/Home/About';
 import Projects from '../components/Home/Projects';
-import Quote from '../components/Home/Quote';
-import Footer from '../components/Footer';
+import Contact from '../components/Home/Contact';
 import '../styles/home.sass';
 import { Triangle } from 'react-loader-spinner'
 import SmallContactBox from "../components/Home/SmallContactBox";
@@ -36,8 +35,7 @@ const IndexPage = () => {
 				<Projects />
 				<SmallContactBox/>
 				<About />
-				<Quote />
-				<Footer />
+				<Contact />
 			</Layout> }
 		</>
 	)
