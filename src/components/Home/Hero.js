@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BiPlay } from 'react-icons/bi'
+import { TypeAnimation } from 'react-type-animation';
 
 const titles = [
     'Program Developer',
@@ -71,8 +72,22 @@ const Hero = () => {
                         <div id="welcome-sup-msg">WELCOME TO MY WORLD</div>
                         <div id="my-name-hero-title"><span>Hi, I’m Yakov Shitrit</span><span id="name-hidden">Hi, I’m Yakov Shitrit</span></div>
                         <div id="my-pro-hero-title">
-                            <div id="hero-title-static">{ titles[0] }</div>
-                            <div id="hero-title-new">{ titles[1] }</div>
+                            <div id="hero-title-static">
+                                <TypeAnimation
+                                    sequence={[
+                                        'Program Developer', // Types 'One'
+                                        1500, // Waits 1s
+                                        'UI Designer', // Deletes 'One' and types 'Two'
+                                        1500, // Waits 2s
+                                        'Fullstack Developer',
+                                        4000
+                                    ]}
+                                    wrapper="div"
+                                    cursor={true}
+                                    repeat={Infinity}
+                                />
+                            </div>
+                            {/* <div id="hero-title-new">{ titles[1] }</div> */}
                             <div id="hero-title-placeholder">----</div>
                         </div>
 

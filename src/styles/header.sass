@@ -14,6 +14,10 @@ header#main-header
         box-shadow: $black-box-shadow
         padding: 10px 0
 
+        #logo-bracket
+            left: 10px !important
+            margin-left: 18px !important
+
 
     #main-header-wrap
         display: flex
@@ -25,9 +29,22 @@ header#main-header
             display: flex
             align-items: center
 
-            #header-logo img
-                height: 40px
-                margin-top: 10px
+            #header-logo
+                position: relative
+                img
+                    height: 40px
+                    margin-top: 10px
+
+                #logo-bracket
+                    height: 30px
+                    position: absolute
+                    left: 100%
+                    top: 50%
+                    transform: translateY(-50%)
+                    margin-top: 0
+                    margin-left: 28px
+                    transition: 0.3s ease
+                    transition-delay: 0.3s
 
             #header-links
                 display: flex

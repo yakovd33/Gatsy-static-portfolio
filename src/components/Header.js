@@ -15,20 +15,25 @@ const Header = () => {
         };
     }, []);
 
+    const openInNewTab = url => {
+        window.open(url, '_blank', 'noopener,noreferrer');
+    };
+
     return ( 
         <header id="main-header" className={ `${ scrollPosition >= 100 ? 'sticky' : '' }` }>
             <div className="container">
                 <div id="main-header-wrap">
                     <div id="header-left">
                         <div id="header-logo">
-                            <img src="static/images/logo-new.png" alt="" />
+                            <img src="static/images/logo-one-bracket.png" alt="" />
+                            <img src="static/images/logo-bracket.png" id="logo-bracket" alt="" />
                         </div>
 
                         <div id="header-links">
-                            <div className="header-link active">HELLO <span className="underscore-hidden">_</span></div>
-                            <div className="header-link">SERVICES <span className="underscore-hidden">_</span></div>
-                            <div className="header-link">PORTFOLIO <span className="underscore-hidden">_</span></div>
-                            <div className="header-link">BLOG <span className="underscore-hidden">_</span></div>
+                            <a href="#hero" className="header-link active">HELLO <span className="underscore-hidden">_</span></a>
+                            <a href="#projects-section" className="header-link">SERVICES <span className="underscore-hidden">_</span></a>
+                            <a href="#projects-section" className="header-link">PORTFOLIO <span className="underscore-hidden">_</span></a>
+                            <a onClick={() => openInNewTab('https://eropa.co.il')} className="header-link">AGENCY <span className="underscore-hidden">_</span></a>
                             <div className="header-link">CONTACT <span className="underscore-hidden">_</span></div>
                         </div>
                     </div>
