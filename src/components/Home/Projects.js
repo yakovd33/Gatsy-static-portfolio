@@ -16,10 +16,10 @@ const Projects = () => {
                             title="SuperMarket+"
                             description={
                                 <>
-                                    Supermarket webapp built with <a href="https://nextjs.org/">next.js</a> as the frontend framework and headless Wordpress as the CMS for product and orders management.
+                                    Supermarket webapp I designed and built with <a href="https://nextjs.org/">Next.js</a> as the frontend framework and headless Wordpress as the CMS for product and orders management.
                                 </>
                             }
-                            tags={ [ 'Next.js', 'Wordpress', 'SASS' ] }
+                            tags={ [ 'Next.js', 'Wordpress', 'SASS', 'UI/UX' ] }
                             links={ [ { url: "", icon: <FiExternalLink/> } ] }
                         />
 
