@@ -1,13 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import Layout from "../components/Layout";
 import Hero from '../components/Home/Hero';
 import About from '../components/Home/About';
 import Projects from '../components/Home/Projects';
-import Contact from '../components/Home/Contact';
+// import Contact from '../components/Home/Contact';
 import '../styles/home.sass';
 import { Triangle } from 'react-loader-spinner'
 import SmallContactBox from "../components/Home/SmallContactBox";
 import { Helmet } from "react-helmet";
+
+const Contact = React.lazy(() =>
+  import("../components/Home/Contact")
+)
 
 const IndexPage = () => {
 	const [didLoad, setDidLoad] = useState(false);
@@ -35,7 +39,9 @@ const IndexPage = () => {
 				<Projects />
 				<SmallContactBox/>
 				<About />
-				<Contact />
+				<Suspense>
+					<Contact />
+				</Suspense>
 			</Layout> }
 		</>
 	)

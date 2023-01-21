@@ -1,7 +1,9 @@
-import React, { useEffect } from "react"
+import React, { useEffect, Suspense } from "react"
 import 'emoji-slider';
 
 const Contact = () => {
+    const isSSR = typeof window === "undefined"
+
     useEffect(() => {
         const label = document?.querySelector('#percentage-label');
         const slider = document?.querySelector('emoji-slider');
