@@ -4,6 +4,12 @@ import 'emoji-slider';
 const Contact = () => {
     const isSSR = typeof window === "undefined"
 
+    const loadEmojiSlider = () => {
+        const slider = document?.querySelector('emoji-slider');
+        slider.value = 0.9;
+        document?.removeEventListener('scroll', loadEmojiSlider);
+    }
+
     useEffect(() => {
         const label = document?.querySelector('#percentage-label');
         const slider = document?.querySelector('emoji-slider');
@@ -12,7 +18,6 @@ const Contact = () => {
         });
     
         const rangeSlider = document?.querySelector('#rangeSlider');
-        console.log(rangeSlider);
         rangeSlider?.addEventListener('change', () => {
           const v = rangeSlider.value;
           console.log(rangeSlider.value);
@@ -24,6 +29,8 @@ const Contact = () => {
                 rangeSlider.emoji = moods[(Math.floor(v * 10))];
             }
         });
+
+        document?.addEventListener('scroll', loadEmojiSlider)
     }, [document, window])
   return (
     <div id="contact-wrap">
@@ -40,7 +47,7 @@ const Contact = () => {
             
             <div id="contact-emoji-slider">
                 <span>Rate my portfolio: <span id="percentage-label">90%</span></span>
-                <emoji-slider emoji="😍" pctValue="90" id="rangeSlider" cssOverride={`
+                <emoji-slider emoji="😃" id="rangeSlider" value="0.9" cssOverride={`
                     #barLine {
                         height: 10px !important
                     }
