@@ -25,8 +25,8 @@ const Header = () => {
                 <div id="main-header-wrap">
                     <div id="header-left">
                         <div id="header-logo">
-                            <img src="static/images/logo-one-bracket.png" alt="" />
-                            <img src="static/images/logo-bracket.png" id="logo-bracket" alt="" />
+                            <img src="/images/logo-one-bracket.png" alt="" />
+                            <img src="/images/logo-bracket.png" id="logo-bracket" alt="" />
                         </div>
 
                         <div id="header-links">

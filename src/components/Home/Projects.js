@@ -12,8 +12,8 @@ const Projects = () => {
 
                     <div id="projects-list">
                         <ProjectListItem
-                            img="/static/images/projects/totseret.png"
-                            title="SuperMarket+"
+                            img="/images/projects/market.jpg"
+                            title="Market+"
                             description={
                                 <>
                                     Supermarket webapp I designed and built with <a href="https://nextjs.org/">Next.js</a> as the frontend framework and headless Wordpress as the CMS for product and orders management.
@@ -24,35 +24,35 @@ const Projects = () => {
                         />
 
                         <ProjectListItem
-                            img="/static/images/projects/bingetracker.mp4"
+                            img="/images/projects/bingetracker.mp4"
                             type="video"
                             title="BingeTracker"
                             description={
                                 <>
-                                     A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on <a href="#">Visual Studio Marketplace</a>, Package Control, <a href="#">Atom Package Manager</a>, and npm.
+                                    A TV and movie tracking webapp built with <a href="https://nextjs.org/">Next.js</a> and Node.js. Using IMDB and other API's to show and track every show and episode out there.
                                 </>
                             }
                             // height="20vw"
                             // width="34vw"
-                            tags={ [ 'Next.js', 'Express.js', 'Postgres', 'TypeScript' ] }
+                            tags={ [ 'Next.js', 'Express.js', 'Postgres', 'TypeScript', 'UI/UX' ] }
                             links={ [ { url: "https://github.com/yakovd33/BingeTracker", icon: <AiFillGithub/> }, { url: "https://binge-tracker.vercel.app/shows", icon: <FiExternalLink/> } ] }
                             reverse={ true }
                         />
 
                         <ProjectListItem
-                            img="/static/images/projects/bingetracker.jpeg"
+                            img="/images/projects/alphadate.jpg"
                             title="AlphaDate"
                             description={
                                 <>
-                                     A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on <a href="#">Visual Studio Marketplace</a>, Package Control, <a href="#">Atom Package Manager</a>, and npm.
+                                     A full feature dating website built with PHP. It has stories, feed with posts, likes and comments, messaging, Tinder style matching and ranking system, date management, flowers and more...
                                 </>
                             }
-                            tags={ [ 'Next.js', 'Express.js', 'Postgres', 'TypeScript' ] }
-                            links={ [ { url: "https://google.com", icon: <AiFillGithub/> }, { url: "", icon: <FiExternalLink/> } ] }
+                            tags={ [ 'PHP', 'handlebars.js', 'MySQL', 'Socket.io', 'UI/UX' ] }
+                            links={ [ { url: "https://github.com/yakovd33/AlphaDate-Dating-Webapp-In-PHP", icon: <AiFillGithub/> }, { url: "http://alphadate.eropa.co.il/", icon: <FiExternalLink/> } ] }
                         />
 
                         <ProjectListItem
-                            img="/static/images/projects/bingetracker.jpeg"
+                            img="/images/projects/bingetracker.jpeg"
                             title="Giver Getter"
                             description={
                                 <>
@@ -60,7 +60,7 @@ const Projects = () => {
                                 </>
                             }
                             tags={ [ 'Next.js', 'Express.js', 'Postgres', 'TypeScript' ] }
-                            links={ [ { url: "https://google.com", icon: <AiFillGithub/> }, { url: "", icon: <FiExternalLink/> } ] }
+                            links={ [ { url: "http://giver-getter.com/", icon: <FiExternalLink/> } ] }
                             reverse={ true }
                         />
                     </div>

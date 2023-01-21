@@ -1,0 +1,82 @@
+@media screen and (max-width: 768px)
+    #header-links, #header-right
+        display: none !important
+
+    #header-logo
+        // width: 100%
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        margin-left: -30px
+        transition: 0.3s ease-in-out
+
+    #main-header.sticky #header-logo
+        margin-left: 0
+
+    .container
+        max-width: 85%
+
+    #hero-section #hero-section-textuals #my-name-hero-title, #hero-section #hero-section-textuals #my-pro-hero-title
+        font-size: 2rem !important
+
+    #hero-section #hero-section-textuals #my-pro-hero-title
+        margin-top: 0 !important
+
+    #hero-section #hero-section-textuals #hero-paragraph
+        font-size: 1rem !important
+
+    #hero-section #hero-section-textuals #hero-buttons .hero-btn
+        font-size: 0.9rem !important
+    
+    #hero-section #hero-section-textuals
+        padding-top: 30vh !important
+
+    #projects-section #projects-list .projects-list-item
+        flex-direction: column
+
+    .projects-list-item
+        margin-bottom: 150px !important
+        .project-item-left
+            img, video
+                max-width: 100% !important
+        .project-item-right
+            width: 100%
+            padding-top: 10px
+
+            .project-description
+                left: 30px
+                right: 10px
+                bottom: -40px
+                width: auto !important
+                box-sizing: border-box
+                font-size: 0.8rem !important
+
+            .project-tags
+                position: absolute
+                bottom: -90px
+            
+            .project-links
+                position: absolute
+                bottom: -96px
+                right: 0
+
+                .project-link
+                    font-size: 1.5rem !important
+        &.reverse
+            flex-direction: column !important
+            text-align: left !important
+
+            .project-description
+                right: 10px !important
+
+    #small-contact-box
+        padding: 0 30px !important
+        flex-direction: column
+        justify-content: center !important
+        text-align: center
+
+        #small-contact-box-left
+            margin-bottom: 20px
+
+    #contact-wrap .field.half.two
+        margin-left: 0 !important

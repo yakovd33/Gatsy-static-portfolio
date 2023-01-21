@@ -9,7 +9,7 @@ const TestimonialItem = () => {
 
             <div className="details">
                 <div className="pp">
-                    <img src="/static/images/shipuztov.jpg" alt="" />
+                    <img src="/images/shipuztov.jpg" alt="" />
                 </div>
 
                 <div className="textual">

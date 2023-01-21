@@ -69,6 +69,14 @@ const Hero = () => {
             <div className="container">
                 <div id="hero-section-content">
                     <div id="hero-section-textuals">
+
+                        <div class="cursor"></div>
+                        <div class="shapes">
+                            <div class="shape shape-1"></div>
+                            <div class="shape shape-2"></div>
+                            <div class="shape shape-3"></div>
+                        </div>
+
                         <div id="welcome-sup-msg">WELCOME TO MY WORLD</div>
                         <div id="my-name-hero-title"><span>Hi, I’m Yakov Shitrit</span><span id="name-hidden">Hi, I’m Yakov Shitrit</span></div>
                         <div id="my-pro-hero-title">

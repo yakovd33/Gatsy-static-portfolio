@@ -1,6 +1,28 @@
-import React from "react"
+import React, { useEffect } from "react"
+import 'emoji-slider';
 
 const Contact = () => {
+    useEffect(() => {
+        const label = document?.querySelector('#percentage-label');
+        const slider = document?.querySelector('emoji-slider');
+        slider?.addEventListener('change', () => {
+          label.innerHTML = Math.round(slider.value * 100) + '%';
+        });
+    
+        const rangeSlider = document?.querySelector('#rangeSlider');
+        console.log(rangeSlider);
+        rangeSlider?.addEventListener('change', () => {
+          const v = rangeSlider.value;
+          console.log(rangeSlider.value);
+          let moods = ["😡","😠","😦","😩","🙁","😐","🙂","😊","😄","😃","😍"];
+			
+			if (v === 0) {
+				rangeSlider.emoji = "🤬";
+			} else {
+                rangeSlider.emoji = moods[(Math.floor(v * 10))];
+            }
+        });
+    }, [document, window])
   return (
     <div id="contact-wrap">
         <form action="" className="form">
@@ -13,6 +35,24 @@ const Contact = () => {
             <p className="field">
                 <textarea className="textarea" cols="50" id="message" name="message" placeholder="Message" required rows="4"></textarea>
             </p>
+            
+            <div id="contact-emoji-slider">
+                <span>Rate my portfolio: <span id="percentage-label">90%</span></span>
+                <emoji-slider emoji="😍" pctValue="90" id="rangeSlider" cssOverride={`
+                    #barLine {
+                        height: 10px !important
+                    }
+
+                    #cursor.emoji {
+                        font-size: 34px !important
+                    }
+
+                    #valueBar, #barLine {
+                        border-radius: 50px
+                    }
+                `}></emoji-slider>
+            </div>
+
             <p className="field">
                 <input className="button" type="submit" value="Send message"/>
             </p>

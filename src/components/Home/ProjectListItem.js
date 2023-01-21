@@ -6,6 +6,7 @@ const ProjectListItem = ({ reverse, img, title, description, tags, links, type =
         <div className="project-item-right">
             <h6 className="project-megatitle">Featured Project</h6>
             <h3 className="project-title">{ title }</h3>
+            
             <p className="project-description">
                 { description }
             </p>
