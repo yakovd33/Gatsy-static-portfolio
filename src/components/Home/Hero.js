@@ -104,7 +104,7 @@ const Hero = () => {
                         </div>
                         <div id="hero-buttons">
                             <a href="#" className="hero-btn active">CONTACT ME</a>
-                            <a href="#" className="hero-btn">MY RESUME <BiPlay/></a>
+                            <a href="/Yakov Shitrit CV.pdf" target="_blank" className="hero-btn">MY RESUME <BiPlay/></a>
                         </div>
                     </div>
 

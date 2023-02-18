@@ -10,7 +10,7 @@ const SmallContactBox = () => {
             </div>
 
             <div id="small-contact-box-right">
-                <a className="download-cv-btn">DOWNLOAD CV <FiDownload/></a>
+                <a href="/Yakov Shitrit CV.pdf" download className="download-cv-btn">DOWNLOAD CV <FiDownload/></a>
                 <a className="cute-btn2">CONTACT ME!</a>
             </div>
         </div>

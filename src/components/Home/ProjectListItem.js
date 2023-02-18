@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ProjectListItem = ({ reverse, img, title, description, tags, links, type = "image", height = 'auto', width = 'auto' }) => {
+const ProjectListItem = ({ reverse, img, title, description, tags, links, year, type = "image", height = 'auto', width = 'auto' }) => {
   return (
     <div className={ `projects-list-item ${ reverse ? 'reverse' : '' }` }>
         <div className="project-item-right">
@@ -10,6 +10,10 @@ const ProjectListItem = ({ reverse, img, title, description, tags, links, type =
             <p className="project-description">
                 { description }
             </p>
+
+            <div className="project-year">
+                <span>YEAR: <strong>{year}</strong></span>
+            </div>
 
             <div className="project-tags">
                 { tags && tags.map((tag) => (

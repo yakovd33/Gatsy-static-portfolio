@@ -14,6 +14,7 @@ const Projects = () => {
                         <ProjectListItem
                             img="/images/projects/market.jpg"
                             title="Market+"
+                            year={2022}
                             description={
                                 <>
                                     Supermarket webapp I designed and built with <a href="https://nextjs.org/">Next.js</a> as the frontend framework and headless Wordpress as the CMS for product and orders management.
@@ -27,6 +28,7 @@ const Projects = () => {
                             img="/images/projects/bingetracker.mp4"
                             type="video"
                             title="BingeTracker"
+                            year={2021}
                             description={
                                 <>
                                     A TV and movie tracking webapp built with <a href="https://nextjs.org/">Next.js</a> and Node.js. Using IMDB and other API's to show and track every show and episode out there.
@@ -42,6 +44,7 @@ const Projects = () => {
                         <ProjectListItem
                             img="/images/projects/alphadate.jpg"
                             title="AlphaDate"
+                            year={2018}
                             description={
                                 <>
                                      A full feature dating website built with PHP. It has stories, feed with posts, likes and comments, messaging, Tinder style matching and ranking system, date management, flowers and more...
@@ -52,16 +55,30 @@ const Projects = () => {
                         />
 
                         <ProjectListItem
-                            img="/images/projects/bingetracker.jpeg"
+                            img="/images/projects/pryerek.jpg"
+                            title="Pryerek.co.il"
+                            year={2021}
+                            description={
+                                <>
+                                     An online ecommerce website with a full feature admin panel designed and built by me.
+                                </>
+                            }
+                            tags={ [ 'Next.js', 'Node.js', 'Express.js', 'MongoDB' ] }
+                            links={ [ { url: "https://github.com/yakovd33/fruits-shop-react", icon: <AiFillGithub/> }, { url: "http://pryerek.co.il/", icon: <FiExternalLink/> } ] }
+                            reverse={ true }
+                        />
+
+                        <ProjectListItem
+                            img="/images/projects/givergetter.jpg"
                             title="Giver Getter"
+                            year={2020}
                             description={
                                 <>
                                      A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on <a href="#">Visual Studio Marketplace</a>, Package Control, <a href="#">Atom Package Manager</a>, and npm.
                                 </>
                             }
-                            tags={ [ 'Next.js', 'Express.js', 'Postgres', 'TypeScript' ] }
+                            tags={ [ 'Next.js', 'Express.js', 'Node.js',  'Postgres', 'TypeScript', 'Socket.io' ] }
                             links={ [ { url: "http://giver-getter.com/", icon: <FiExternalLink/> } ] }
-                            reverse={ true }
                         />
                     </div>
                 </div>
