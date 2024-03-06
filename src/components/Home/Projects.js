@@ -21,7 +21,7 @@ const Projects = () => {
                                 </>
                             }
                             tags={ [ 'Next.js', 'Wordpress', 'SASS', 'UI/UX' ] }
-                            links={ [ { url: "https://www.supermaimon.com/", icon: <FiExternalLink/> }, { url: "https://totseret-bait.com/", icon: <FiExternalLink/> } ] }
+                            links={ [ { url: "https://shuk-haikarim.com/", icon: <FiExternalLink/> }, { url: "https://www.supermaimon.com/", icon: <FiExternalLink/> }, { url: "https://totseret-bait.com/", icon: <FiExternalLink/> } ] }
                         />
 
                         <ProjectListItem
