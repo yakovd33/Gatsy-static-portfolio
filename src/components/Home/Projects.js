@@ -12,9 +12,25 @@ const Projects = () => {
 
                     <div id="projects-list">
                         <ProjectListItem
+                            img="/images/projects/arduino.png"
+                            title="ArduinoStudio"
+                            year={2023}
+                            reverse={ true }
+                            animate={true}
+                            description={
+                                <>
+                                    A no-code application used for planning and running complex Arduino sequences on the browser without a line of code.
+                                </>
+                            }
+                            tags={ [ 'Electron.js', 'Next.js', 'Node.js', 'SASS', 'UI/UX' ] }
+                            links={ [ { url: "https://arduinostudio.com/", icon: <FiExternalLink/> } ] }
+                        />
+
+                        <ProjectListItem
                             img="/images/projects/market.jpg"
                             title="Market+"
                             year={2022}
+                            animate={true}
                             description={
                                 <>
                                     Supermarket webapp I designed and built with <a href="https://nextjs.org/">Next.js</a> as the frontend framework and headless Wordpress as the CMS for product and orders management.
@@ -45,6 +61,7 @@ const Projects = () => {
                             img="/images/projects/alphadate.jpg"
                             title="AlphaDate"
                             year={2018}
+                            animate={true}
                             description={
                                 <>
                                      A full feature dating website built with PHP. It has stories, feed with posts, likes and comments, messaging, Tinder style matching and ranking system, date management, flowers and more...
@@ -57,6 +74,7 @@ const Projects = () => {
                         <ProjectListItem
                             img="/images/projects/pryerek.jpg"
                             title="Pryerek.co.il"
+                            animate={true}
                             year={2021}
                             description={
                                 <>

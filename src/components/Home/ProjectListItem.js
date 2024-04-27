@@ -1,8 +1,8 @@
 import React from 'react'
 
-const ProjectListItem = ({ reverse, img, title, description, tags, links, year, type = "image", height = 'auto', width = 'auto' }) => {
+const ProjectListItem = ({ reverse, img, title, description, tags, links, year, type = "image", height = 'auto', width = 'auto', animate = false }) => {
   return (
-    <div className={ `projects-list-item ${ reverse ? 'reverse' : '' }` }>
+    <div className={ `projects-list-item ${ reverse ? 'reverse' : '' } ${animate ? 'animate' : ''}` }>
         <div className="project-item-right">
             <h6 className="project-megatitle">Featured Project</h6>
             <h3 className="project-title">{ title }</h3>
