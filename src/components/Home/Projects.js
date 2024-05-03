@@ -22,7 +22,7 @@ const Projects = () => {
                                     A no-code application used for planning and running complex Arduino sequences on the browser without a line of code.
                                 </>
                             }
-                            tags={ [ 'Electron.js', 'Next.js', 'Node.js', 'SASS', 'UI/UX' ] }
+                            tags={ [ 'Electron.js', 'Next.js', 'Node.js', 'Canvas', 'Socket.io', 'SASS', 'UI/UX' ] }
                             links={ [ { url: "https://arduinostudio.com/", icon: <FiExternalLink/> } ] }
                         />
 
