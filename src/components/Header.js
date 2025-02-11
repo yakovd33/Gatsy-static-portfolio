@@ -33,7 +33,7 @@ const Header = () => {
                             <a href="#hero" className="header-link active">HELLO <span className="underscore-hidden">_</span></a>
                             <a href="#projects-section" className="header-link">SERVICES <span className="underscore-hidden">_</span></a>
                             <a href="#projects-section" className="header-link">PORTFOLIO <span className="underscore-hidden">_</span></a>
-                            <a onClick={() => openInNewTab('https://eropa.co.il')} className="header-link">AGENCY <span className="underscore-hidden">_</span></a>
+                            <a onClick={() => openInNewTab('https://eropa.co.il')} className="header-link">MY AGENCY <span className="underscore-hidden">_</span></a>
                             <div className="header-link">CONTACT <span className="underscore-hidden">_</span></div>
                         </div>
                     </div>
