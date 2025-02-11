@@ -1,8 +1,9 @@
+import { Link } from 'gatsby'
 import React from 'react'
 
-const ProjectListItem = ({ reverse, img, title, description, tags, links, year, type = "image", height = 'auto', width = 'auto', animate = false }) => {
+const ProjectListItem = ({ reverse, img, title, description, tags, links, year, type = "image", height = 'auto', width = 'auto', animate = false, mainLink = null }) => {
   return (
-    <div className={ `projects-list-item ${ reverse ? 'reverse' : '' } ${animate ? 'animate' : ''}` }>
+    <Link href={`${mainLink ? mainLink : ''}`} target="_blank" className={ `projects-list-item ${ reverse ? 'reverse' : '' } ${animate ? 'animate' : ''}` }>
         <div className="project-item-right">
             <h6 className="project-megatitle">Featured Project</h6>
             <h3 className="project-title">{ title }</h3>
@@ -41,7 +42,7 @@ const ProjectListItem = ({ reverse, img, title, description, tags, links, year, 
                 </video>
             ) }
         </div>
-    </div>
+    </Link>
   )
 }
 
