@@ -2,7 +2,7 @@ import React from 'react';
 import ProjectListItem from './ProjectListItem';
 import { AiFillGithub } from 'react-icons/ai';
 import { FiExternalLink } from 'react-icons/fi';
-import { FaAppStore } from 'react-icons/fa';
+import { FaAppStore, FaGooglePlay } from 'react-icons/fa';
 
 const Projects = () => {
     return ( 
@@ -25,7 +25,7 @@ const Projects = () => {
                             }
                             mainLink={"https://apps.apple.com/il/app/%D7%9E%D7%A7%D7%95%D7%A9%D7%A8%D7%95%D7%AA/id6739335171"}
                             tags={ [ 'React Native', 'Node.js', 'Express', 'Socket.io', 'Postgres', 'IOS', 'Android'] }
-                            links={ [ { url: "https://apps.apple.com/il/app/%D7%9E%D7%A7%D7%95%D7%A9%D7%A8%D7%95%D7%AA/id6739335171", icon: <FaAppStore/> } ] }
+                            links={ [ { url: "https://apps.apple.com/il/app/%D7%9E%D7%A7%D7%95%D7%A9%D7%A8%D7%95%D7%AA/id6739335171", icon: <FaAppStore/> }, { url: 'https://play.google.com/store/apps/details?id=com.didilak', icon: <FaGooglePlay/> } ] }
                         />
 
                         <ProjectListItem
