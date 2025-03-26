@@ -13,6 +13,22 @@ const Projects = () => {
 
                     <div id="projects-list">
                         <ProjectListItem
+                            img="/images/projects/superboker.jpg"
+                            title="Didilak"
+                            year={2024}
+                            reverse={ false }
+                            animate={true}
+                            description={
+                                <>
+                                    A no-code application used for planning and running complex Arduino sequences on the browser without a line of code.
+                                </>
+                            }
+                            mainLink={"http://superboker.co.il/"}
+                            tags={ [ 'React', 'Node.js', 'Express', 'Postgres', 'Vite', 'Tailwind.css'] }
+                            links={ [ { url: "http://superboker.co.il/", icon: <FiExternalLink/> } ] }
+                        />
+
+                        <ProjectListItem
                             img="/images/projects/didilak.jpg"
                             title="Didilak"
                             year={2024}
