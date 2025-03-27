@@ -31,7 +31,7 @@ const Projects = () => {
                         <ProjectListItem
                             img="/images/projects/didilak.jpg"
                             title="Didilak"
-                            year={2024}
+                            year={2025}
                             reverse={ true }
                             animate={true}
                             description={
