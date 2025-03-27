@@ -126,7 +126,7 @@ const Projects = () => {
                             links={ [ { url: "https://github.com/yakovd33/fruits-shop-react", icon: <AiFillGithub/> }, { url: "http://pryerek.co.il/", icon: <FiExternalLink/> } ] }
                         />
 
-                        <ProjectListItem
+                        {/* <ProjectListItem
                             img="/images/projects/givergetter.jpg"
                             title="Giver Getter"
                             year={2020}
@@ -139,7 +139,7 @@ const Projects = () => {
                             tags={ [ 'Next.js', 'Express.js', 'Node.js',  'Postgres', 'TypeScript', 'Socket.io' ] }
                             mainLink="http://giver-getter.com/"
                             links={ [ { url: "http://giver-getter.com/", icon: <FiExternalLink/> } ] }
-                        />
+                        /> */}
                     </div>
                 </div>
             </div>
