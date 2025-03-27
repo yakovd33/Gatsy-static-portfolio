@@ -15,7 +15,7 @@ const Projects = () => {
                         <ProjectListItem
                             img="/images/projects/superboker.jpg"
                             title="Superboker"
-                            year={2024}
+                            year={2025}
                             reverse={ false }
                             animate={true}
                             description={
@@ -31,7 +31,7 @@ const Projects = () => {
                         <ProjectListItem
                             img="/images/projects/didilak.jpg"
                             title="Didilak"
-                            year={2025}
+                            year={2024}
                             reverse={ true }
                             animate={true}
                             description={
