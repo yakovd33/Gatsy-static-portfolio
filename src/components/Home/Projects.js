@@ -14,13 +14,13 @@ const Projects = () => {
                     <div id="projects-list">
                         <ProjectListItem
                             img="/images/projects/superboker.jpg"
-                            title="Didilak"
+                            title="Superboker"
                             year={2024}
                             reverse={ false }
                             animate={true}
                             description={
                                 <>
-                                    A no-code application used for planning and running complex Arduino sequences on the browser without a line of code.
+                                    An e-commerce web app for a morning delivery service.
                                 </>
                             }
                             mainLink={"http://superboker.co.il/"}
@@ -36,7 +36,7 @@ const Projects = () => {
                             animate={true}
                             description={
                                 <>
-                                    A no-code application used for planning and running complex Arduino sequences on the browser without a line of code.
+                                    An IOS/Android app portal designed for girls looking for beauty and cosmetic services near them.
                                 </>
                             }
                             mainLink={"https://apps.apple.com/il/app/%D7%9E%D7%A7%D7%95%D7%A9%D7%A8%D7%95%D7%AA/id6739335171"}
