@@ -34,6 +34,14 @@ const Contact = () => {
     }, [document, window])
   return (
     <div id="contact-wrap">
+        <div className="contact-intro">
+            <p className="contact-kicker"><span>03.</span> Let's work together</p>
+            <h3>Tell me about the product you want to build</h3>
+            <p className="contact-description">
+                Share a quick overview of your idea, expected timeline, budget range, and any must-have features.
+                I respond to every message within two business days with next steps.
+            </p>
+        </div>
         <form action="" className="form">
             <p className="field required half">
                 <input className="text-input" id="name" name="name" placeholder="Fullname" required type="text"/>

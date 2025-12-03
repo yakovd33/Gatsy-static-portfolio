@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { AiFillGithub } from 'react-icons/ai';
 
 const Header = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -31,16 +32,19 @@ const Header = () => {
 
                         <div id="header-links">
                             <a href="#hero" className="header-link active">HELLO <span className="underscore-hidden">_</span></a>
-                            <a href="#projects-section" className="header-link">SERVICES <span className="underscore-hidden">_</span></a>
                             <a href="#projects-section" className="header-link">PORTFOLIO <span className="underscore-hidden">_</span></a>
+                            <a href="#services-section" className="header-link">SERVICES <span className="underscore-hidden">_</span></a>
+                            <a href="#contact-wrap" className="header-link">CONTACT <span className="underscore-hidden">_</span></a>
                             <a onClick={() => openInNewTab('https://eropa.co.il')} className="header-link">MY AGENCY <span className="underscore-hidden">_</span></a>
-                            <div className="header-link">CONTACT <span className="underscore-hidden">_</span></div>
                         </div>
                     </div>
 
                     <div id="header-right">
                         <div id="header-contact-btn-wrap">
-                            <a href="#" className="cute-btn" data-back="yakovd33@gmail.com" data-front="CONTACT ME!">CONTACT ME!</a>
+                            <a href="https://github.com/yakovd33" target="_blank" className="cute-btn" data-back="yakovd33@gmail.com" data-front="CONTACT ME!">
+                                <AiFillGithub />
+                                <span>MY GITHUB!</span>
+                            </a>
                         </div>
                     </div>
                 </div>

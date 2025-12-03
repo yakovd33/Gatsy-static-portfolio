@@ -28,8 +28,31 @@
     #hero-section #hero-section-textuals #hero-buttons .hero-btn
         font-size: 0.9rem !important
     
+    #hero-section
+        padding: 120px 0 70px
+        min-height: auto
+        height: auto
+
+        #hero-section-content
+            flex-direction: column
+            gap: 40px
+
+        #hero-section-scroll-guide
+            width: 100%
+
+            .mouse-scroll
+                position: static
+                transform: none
+                width: auto
+
     #hero-section #hero-section-textuals
-        padding-top: 30vh !important
+        padding-top: 100px !important
+
+    #hero-section-scroll-guide
+        bottom: 20px
+
+        .mouse-scroll
+            transform: scale(0.75)
 
     #projects-section #projects-list .projects-list-item
         flex-direction: column
@@ -93,33 +116,61 @@
         &::after
             max-width: 40%
 
-    #mini-projects
-        flex-direction: column
-        gap: 12px
+    .mini-projects-carousel
+        padding: 18px 20px 24px
 
-        .mini-project
+        .mini-carousel-header
             flex-direction: column
             align-items: flex-start
-            width: 100%
-            padding: 12px 16px
+            gap: 6px
+
+            .mini-carousel-controls
+                width: 100%
+                justify-content: flex-end
+
+        .mini-carousel-track
             gap: 10px
-            box-sizing: border-box
 
-            .mp-text
-                width: 100%
-                .mp-title
-                    font-size: 1.05rem
-                    white-space: normal
-                .mp-desc
-                    white-space: normal
+        .mini-slide
+            min-width: calc(100% - 30px)
+            flex-direction: column
+            align-items: flex-start
+            gap: 10px
 
-            .mini-project-links
+            .mini-copy
                 width: 100%
-                justify-content: flex-start
+
+            .mini-actions
+                flex-direction: row
                 gap: 16px
 
     .load-more-wrapper
         padding: 0 10px
+
+    #services-section
+        padding: 60px 0 70px
+
+        .services-header
+            margin-bottom: 30px
+            h2
+                font-size: 1.6rem
+
+        .services-carousel
+            flex-direction: column
+            gap: 14px
+
+            .services-nav
+                display: none
+
+            .services-viewport
+                width: 100%
+
+                .services-track
+                    gap: 16px
+
+                    .service-card
+                        padding: 22px
+                        min-width: 85%
 
     #projects-section .load-more-projects
         margin-top: -40px

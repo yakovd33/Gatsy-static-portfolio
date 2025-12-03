@@ -70,12 +70,7 @@ const Hero = () => {
                 <div id="hero-section-content">
                     <div id="hero-section-textuals">
 
-                        <div class="cursor"></div>
-                        <div class="shapes">
-                            <div class="shape shape-1"></div>
-                            <div class="shape shape-2"></div>
-                            <div class="shape shape-3"></div>
-                        </div>
+                        <div className="cursor"></div>
 
                         <div id="welcome-sup-msg">WELCOME TO MY WORLD</div>
                         <div id="my-name-hero-title"><span>Hi, I’m Yakov Shitrit</span><span id="name-hidden">Hi, I’m Yakov Shitrit</span></div>
@@ -108,16 +103,16 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    <div id="hero-section-scroll-guide">
-
-                        <a title="Scroll Down" href="#" class="mouse-scroll" data-target="message">
-                            <span class="mouse">
-                                <span></span>
-                            </span>
-                            <span>SCROLL TO KNOW MORE</span>
-                        </a>
-                    </div>
                 </div>
+            </div>
+
+            <div id="hero-section-scroll-guide">
+                <a title="Scroll Down" href="#projects-section" className="mouse-scroll">
+                    <span className="mouse">
+                        <span></span>
+                    </span>
+                    <span>SCROLL TO KNOW MORE</span>
+                </a>
             </div>
 
             <style>

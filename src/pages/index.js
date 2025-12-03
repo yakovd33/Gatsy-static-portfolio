@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import Hero from '../components/Home/Hero';
 import About from '../components/Home/About';
 import Projects from '../components/Home/Projects';
+import Services from '../components/Home/Services';
 // import Contact from '../components/Home/Contact';
 import '../styles/home.sass';
 import { Triangle } from 'react-loader-spinner'
@@ -37,6 +38,7 @@ const IndexPage = () => {
 			{ didLoad && <Layout>
 				<Hero />
 				<Projects />
+				<Services />
 				<SmallContactBox/>
 				<About />
 				<Suspense>

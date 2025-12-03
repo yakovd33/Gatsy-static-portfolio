@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "embla-carousel-react": "^8.3.0",
     "emoji-slider": "github:yakovd33/emoji-slider",
     "gatsby": "5.3.3",
     "gatsby-plugin-sass": "6.3.1",

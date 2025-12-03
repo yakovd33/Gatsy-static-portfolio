@@ -5,110 +5,332 @@
 @import 'contact.sass'
 
 // Home
-// Hero Section
 #hero-section
-    background-image: url("/images/hero-bg.png")
+    position: relative
+    display: flex
+    align-items: center
     height: 100vh
-    display: block
-    background-size: cover
+    padding: 0
     color: #fff
+    background-image: linear-gradient(120deg, rgba(4, 6, 10, 0.9), rgba(6, 12, 22, 0.08)), url('/images/hero-bg.png')
+    background-size: cover
+    background-position: center
+    overflow: hidden
+    max-height: 100vh
+
+    .container
+        width: 1110px
+
+    #hero-section-content
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        gap: 60px
+        padding: 130px 0 110px
 
     #hero-section-textuals
-        padding-top: 230px
+        max-width: 700px
+        padding-top: 40px
+        position: relative
+        z-index: 2
 
         #welcome-sup-msg
-            color: #BBBBBB
-            margin-bottom: 10px
+            color: #94a3b8
+            letter-spacing: 0.25em
+            font-size: 0.75rem
+            text-transform: uppercase
+            margin-bottom: 14px
 
         #my-name-hero-title, #my-pro-hero-title
             font-size: 2.8rem
             font-weight: 600
             position: relative
-            text-shadow: 0 0 10px #141414
+            text-shadow: 0 0 18px #0b0f17
 
-            #hero-title-placeholder
-                visibility: hidden
-
-            #hero-title-old
-                position: absolute
-                animation-name: titleup
-                animation-duration: 1s
-
-            #hero-title-new
-                position: absolute
-                opacity: 0
-                bottom: -100%
-                // animation-name: titlenew
-                // animation-delay: 1s
-                // animation-duration: 1s
-
-            #hero-title-static
-                position: absolute
-                top: 0
-
-                &.animate
-                    animation-name: titleup
-                    animation-duration: 1s
-        
         #my-name-hero-title
             display: inline-block
 
             span:not(#name-hidden)
                 position: absolute
-                z-index: 999
+                z-index: 2
 
             #name-hidden
                 visibility: hidden
-        
+
         #my-pro-hero-title
-            color: $base-color
             margin-top: -10px
+            color: #29ecba
+
+        #hero-title-static
+            position: relative
+            display: inline-flex
+            align-items: center
+
+        #hero-title-placeholder
+            visibility: hidden
 
         #hero-paragraph
-            max-width: 500px
-            font-size: 0.9rem
-            margin-top: 20px
+            max-width: 520px
+            font-size: 0.95rem
+            line-height: 1.3
+            color: rgba(230, 237, 255, 0.85)
+            margin-top: -30px
 
         #hero-buttons
             margin-top: 40px
+            display: flex
+            flex-wrap: wrap
+            gap: 12px
 
             .hero-btn
-                padding: 8px 13px
-                border-radius: 2px
-                color: #fff
-                font-weight: bold
-                background-color: transparent
-                transition: 0.3s ease-in-out
-                font-size: 0.75rem
                 display: inline-flex
                 align-items: center
-                margin-right: 5px
+                gap: 8px
+                padding: 12px 22px
+                border-radius: 999px
+                border: 1px solid rgba(255, 255, 255, 0.2)
+                font-size: 0.78rem
+                font-weight: 700
+                letter-spacing: 0.12em
+                text-transform: uppercase
+                color: #e9fdf6
+                background: transparent
+                transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease, border-color 0.25s ease
 
-                svg
-                    margin-left: 5px
+                &:hover
+                    background: #29ecba
+                    color: #041015
+                    border-color: #29ecba
+                    transform: translateY(-2px)
 
                 &.active
-                    border: 2px solid $base-color
+                    background: #29ecba
+                    color: #041015
+                    border-color: #29ecba
+
+    #hero-section-scroll-guide
+        position: absolute
+        bottom: 35px
+        left: 0
+        width: 100%
+        display: flex
+        justify-content: center
+        pointer-events: none
+
+        .mouse-scroll
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 8px
+            color: rgba(255, 255, 255, 0.7)
+            text-decoration: none
+            font-size: 0.78rem
+            letter-spacing: 0.14em
+            transform: scale(0.85)
+            pointer-events: auto
+
+            span
+                pointer-events: none
+
+            .mouse
+                width: 24px
+                height: 45px
+                border: 2px solid #fff
+                border-radius: 100px
+                display: flex
+                align-items: center
+                justify-content: center
+                box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2)
+                animation: mouse 1.35s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
+
+                span
+                    width: 6px
+                    height: 6px
+                    background: #29ecba
+                    border-radius: 50%
+                    animation: mouseScroll 1.35s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
+
+    .cursor
+        pointer-events: none
+        position: absolute
+        z-index: 1
+
+    .cursor
+        width: 320px
+        height: 320px
+        background: radial-gradient(circle, rgba(41, 236, 186, 0.15), transparent 70%)
+        top: -160px
+        left: -160px
+        filter: blur(12px)
+
+    .mini-projects-carousel
+        margin-top: 60px
+        padding: 18px 20px 22px
+        border: 1px solid rgba(255,255,255,0.05)
+        border-radius: 18px
+        background: rgba(7, 12, 20, 0.75)
+        backdrop-filter: blur(12px)
+        box-shadow: 0 12px 32px rgba(0,0,0,0.32)
+
+        .mini-carousel-header
+            display: flex
+            align-items: center
+            justify-content: space-between
+            color: #a8b2d1
+            font-size: 0.68rem
+            letter-spacing: 0.02em
+            text-transform: uppercase
+            border-bottom: 1px solid rgba(255,255,255,0.04)
+            padding-bottom: 12px
+            gap: 12px
+
+            .mini-carousel-label
+                display: flex
+                flex-direction: column
+                gap: 4px
+
+                .mini-label
+                    font-weight: 700
+                    color: #29ecba
+                    font-size: 0.74rem
+
+                .mini-sub
+                    opacity: 0.55
+                    font-size: 0.66rem
+
+            .mini-carousel-controls
+                display: inline-flex
+                align-items: center
+                gap: 8px
+
+                .mini-nav-btn
+                    width: 34px
+                    height: 34px
+                    border-radius: 50%
+                    border: 1px solid rgba(255,255,255,0.15)
+                    background: rgba(10, 16, 24, 0.8)
+                    color: #d6e5fb
+                    display: inline-flex
+                    align-items: center
+                    justify-content: center
+                    font-size: 0.9rem
+                    transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease
+
+                    &:hover:not(:disabled)
+                        border-color: rgba(41, 236, 186, 0.5)
+                        color: #29ecba
+                        transform: translateY(-1px)
+
+                    &:disabled
+                        opacity: 0.35
+                        cursor: not-allowed
+                        transform: none
+
+        .mini-carousel-viewport
+            margin-top: 16px
+            overflow: hidden
+            position: relative
+            padding: 4px 0 10px
+
+            &.is-interactive
+                cursor: grab
+
+                &:active
+                    cursor: grabbing
+
+                &::before, &::after
+                    opacity: 1
+
+            &::before, &::after
+                content: ''
+                position: absolute
+                top: 4px
+                bottom: 10px
+                width: 50px
+                pointer-events: none
+                transition: opacity 0.2s ease
+                opacity: 0
+
+            &::before
+                left: 0
+                background: linear-gradient(90deg, rgba(7, 12, 20, 0.95), rgba(7, 12, 20, 0))
+
+            &::after
+                right: 0
+                background: linear-gradient(270deg, rgba(7, 12, 20, 0.95), rgba(7, 12, 20, 0))
+
+        .mini-carousel-track
+            display: flex
+            gap: 8px
+            will-change: transform
+
+        .mini-slide
+            display: flex
+            align-items: center
+            gap: 12px
+            min-width: 165px
+            padding: 10px 12px
+            border-radius: 12px
+            background: rgba(12, 17, 25, 0.92)
+            border: 1px solid rgba(255,255,255,0.05)
+            box-shadow: 0 4px 18px rgba(0,0,0,0.28)
+            color: #c3cedf
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease
+
+            &:hover
+                transform: translateY(-4px)
+                border-color: rgba(41, 236, 186, 0.45)
+                box-shadow: 0 12px 30px rgba(41, 236, 186, 0.12)
+
+            .mini-thumb
+                display: flex
+                align-items: center
+                justify-content: center
+                width: 36px
+                height: 36px
+                border-radius: 9px
+                background: radial-gradient(circle at 20% 20%, rgba(41, 236, 186, 0.18), rgba(17, 19, 30, 0.9))
+                border: 1px solid rgba(41, 236, 186, 0.18)
+
+                img
+                    width: 26px
+                    height: 26px
+                    border-radius: 6px
+                    object-fit: cover
+
+            .mini-copy
+                flex: 1
+
+                .mini-title
+                    display: inline-block
+                    color: #f5f7ff
+                    font-weight: 500
+                    margin-bottom: 2px
+                    font-size: 0.78rem
+                    text-decoration: none
 
                     &:hover
-                        background: $base-color
-                        color: #000
+                        color: #29ecba
 
+                p
+                    margin: 0
+                    font-size: 0.64rem
+                    color: #8f9ab1
+                    line-height: 1.3
 
+            .mini-actions
+                display: flex
+                flex-direction: column
+                gap: 6px
 
-    .mouse-scroll
-        position: absolute
-        text-align: center
-        left: 0
-        right: 0
-        bottom: 20px
-        width: 225px
-        height: 100px
-        padding-top: 15px
-        margin-left: auto
-        margin-right: auto
-        user-select: none
-        transform: scale(0.75)
+                a
+                    color: #7d8aa8
+                    font-size: 0.95rem
+                    transition: color 0.2s ease, transform 0.2s ease
+
+                    &:hover
+                        color: #29ecba
+                        transform: translateY(-1px)
         cursor: pointer
 
         span
@@ -481,6 +703,134 @@
             transition: color 0.18s
             &:hover
                 color: #29ecba
+#services-section
+    background-color: #05060a
+    padding: 90px 0 110px
+    color: #e3f2ff
+
+    .services-header
+        text-align: center
+        max-width: 800px
+        margin: 0 auto 50px
+
+        .section-eyebrow
+            text-transform: uppercase
+            letter-spacing: 0.2em
+            font-size: 0.75rem
+            color: #29ecba
+            margin-bottom: 12px
+
+            span
+                color: #94a6ff
+
+        h2
+            font-size: 2rem
+            line-height: 1.3
+            margin-bottom: 15px
+
+        .services-intro
+            color: #94a3b8
+            font-size: 0.95rem
+
+    .services-carousel
+        display: flex
+        align-items: center
+        gap: 18px
+
+        .services-nav
+            width: 44px
+            height: 44px
+            border-radius: 50%
+            border: 1px solid rgba(41, 236, 186, 0.4)
+            background: rgba(6, 12, 22, 0.7)
+            color: #29ecba
+            display: inline-flex
+            align-items: center
+            justify-content: center
+            font-size: 1.2rem
+            cursor: pointer
+            transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease
+
+            &:hover:not(:disabled)
+                background: #29ecba
+                color: #05060a
+                border-color: #29ecba
+
+            &:disabled
+                opacity: 0.3
+                cursor: not-allowed
+
+        .services-viewport
+            flex: 1
+            overflow: hidden
+            padding: 8px 0 16px
+
+        .services-track
+            display: flex
+            gap: 22px
+            cursor: grab
+            user-select: none
+            touch-action: pan-y
+
+            &.is-dragging
+                cursor: grabbing
+
+        .service-card
+            min-width: 280px
+            background: rgba(12, 17, 25, 0.9)
+            border: 1px solid rgba(147, 161, 198, 0.15)
+            border-radius: 18px
+            padding: 28px
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3)
+            backdrop-filter: blur(6px)
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease
+
+            &:hover
+                transform: translateY(-6px)
+                border-color: rgba(41, 236, 186, 0.5)
+                box-shadow: 0 25px 70px rgba(41, 236, 186, 0.15)
+
+            .service-card-head
+                display: flex
+                align-items: baseline
+                gap: 12px
+                margin-bottom: 12px
+
+                .service-index
+                    font-size: 0.9rem
+                    letter-spacing: 0.2em
+                    color: #29ecba
+                    font-weight: bold
+
+                h3
+                    font-size: 1.15rem
+                    margin: 0
+                    color: #f4f7ff
+
+            p
+                margin: 0
+                color: #b7c4d6
+                font-size: 0.9rem
+                line-height: 1.6
+
+    .services-dots
+        margin-top: 32px
+        display: flex
+        justify-content: center
+        gap: 10px
+
+        .services-dot
+            width: 10px
+            height: 10px
+            border-radius: 50%
+            border: none
+            background: rgba(147, 161, 198, 0.4)
+            cursor: pointer
+            transition: transform 0.2s ease, background 0.2s ease
+
+            &.active
+                background: #29ecba
+                transform: scale(1.3)
 
 // Small contact box
 #small-contact-box-wrap

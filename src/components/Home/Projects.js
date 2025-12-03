@@ -4,6 +4,23 @@ import { AiFillGithub } from 'react-icons/ai';
 import { FiExternalLink } from 'react-icons/fi';
 import { FaAppStore, FaGooglePlay } from 'react-icons/fa';
 
+const miniProjects = [
+    {
+        title: 'Fontest — Font testing',
+        description: 'Quickly test fonts on any page.',
+        icon: '/images/projects/small/fontest.png',
+        link: 'https://chromewebstore.google.com/detail/fontest-%E2%80%94-font-testing/nifpgikdnbihfobboonfjpmdlppeeoom?authuser=0&hl=en-GB',
+        github: 'https://github.com/yakovd33/fontest'
+    },
+    {
+        title: 'Message via WhatsApp',
+        description: 'Send WhatsApp messages without saving contacts.',
+        icon: '/images/projects/small/whatsapp-sender.png',
+        link: 'https://chromewebstore.google.com/detail/message-via-whatsapp/obcfmbihiocgfmgflfidjlildciokgif?authuser=0&hl=en-GB',
+        github: 'https://github.com/yakovd33/message-via-whatsapp-chrome'
+    }
+];
+
 const Projects = () => {
     const [showMoreProjects, setShowMoreProjects] = useState(false);
 
@@ -98,7 +115,7 @@ const Projects = () => {
                                 img="/images/projects/bingetracker.mp4"
                                 type="video"
                                 title="BingeTracker"
-
+                                reverse={true}
                                 year={2021}
                                 description={
                                     <>
@@ -110,14 +127,12 @@ const Projects = () => {
                                 tags={ [ 'Next.js', 'Express.js', 'Postgres', 'TypeScript', 'UI/UX' ] }
                                 mainLink="https://binge-tracker.vercel.app/shows"
                                 links={ [ { url: "https://github.com/yakovd33/BingeTracker", icon: <AiFillGithub/> }, { url: "https://binge-tracker.vercel.app/shows", icon: <FiExternalLink/> } ] }
-                                reverse={ false }
                             />
 
                             <ProjectListItem
                                 img="/images/projects/alphadate.jpg"
                                 title="AlphaDate"
                                 year={2018}
-                                reverse={true}
                                 animate={true}
                                 description={
                                     <>
@@ -144,55 +159,55 @@ const Projects = () => {
                         </button>
                     </div>
 
-                    {/* Small projects (one-line items) */}
-                    <h4 className="mini-projects-title">
-                        Small Projects — Chrome Extensions
-                    </h4>
-                    <div id="mini-projects">
-                        <div className="mini-project">
-                            <a
-                                href="https://chromewebstore.google.com/detail/fontest-%E2%80%94-font-testing/nifpgikdnbihfobboonfjpmdlppeeoom?authuser=0&hl=en-GB"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="mini-project-mainlink"
-                            >
-                                <img
-                                    src="/images/projects/small/fontest.png"
-                                    alt="Fontest — Font testing icon"
-                                />
-                            </a>
-                            <div className="mp-text">
-                                <a className="mp-title" href="https://chromewebstore.google.com/detail/fontest-%E2%80%94-font-testing/nifpgikdnbihfobboonfjpmdlppeeoom?authuser=0&hl=en-GB" target="_blank" rel="noopener noreferrer">Fontest — Font testing</a>
-                                <div className="mp-desc">Quickly test fonts on any page.</div>
-                            </div>
-                            <div className="mini-project-links">
-                                <a href="https://chromewebstore.google.com/detail/fontest-%E2%80%94-font-testing/nifpgikdnbihfobboonfjpmdlppeeoom?authuser=0&hl=en-GB" target="_blank" rel="noopener noreferrer" title="Chrome Web Store"><FiExternalLink /></a>
-                                <a href="https://github.com/yakovd33/fontest" target="_blank" rel="noopener noreferrer" title="GitHub Repository"><AiFillGithub /></a>
-                            </div>
+                        <h4 className="mini-projects-title">
+                            Small Projects — Chrome Extensions
+                        </h4>
+                        <div id="mini-projects">
+                            {miniProjects.map((project) => (
+                                <div className="mini-project" key={project.title}>
+                                    <a
+                                        href={project.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="mini-project-mainlink"
+                                    >
+                                        <img
+                                            src={project.icon}
+                                            alt={`${project.title} icon`}
+                                        />
+                                    </a>
+                                    <div className="mp-text">
+                                        <a
+                                            className="mp-title"
+                                            href={project.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {project.title}
+                                        </a>
+                                        <div className="mp-desc">{project.description}</div>
+                                    </div>
+                                    <div className="mini-project-links">
+                                        <a
+                                            href={project.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            title="Chrome Web Store"
+                                        >
+                                            <FiExternalLink />
+                                        </a>
+                                        <a
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            title="GitHub Repository"
+                                        >
+                                            <AiFillGithub />
+                                        </a>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-
-                        <div className="mini-project">
-                            <a
-                                href="https://chromewebstore.google.com/detail/message-via-whatsapp/obcfmbihiocgfmgflfidjlildciokgif?authuser=0&hl=en-GB"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="mini-project-mainlink"
-                            >
-                                <img
-                                    src="/images/projects/small/whatsapp-sender.png"
-                                    alt="Message via WhatsApp icon"
-                                />
-                            </a>
-                            <div className="mp-text">
-                                <a className="mp-title" href="https://chromewebstore.google.com/detail/message-via-whatsapp/obcfmbihiocgfmgflfidjlildciokgif?authuser=0&hl=en-GB" target="_blank" rel="noopener noreferrer">Message via WhatsApp</a>
-                                <div className="mp-desc">Send WhatsApp messages without saving contacts.</div>
-                            </div>
-                            <div className="mini-project-links">
-                                <a href="https://chromewebstore.google.com/detail/message-via-whatsapp/obcfmbihiocgfmgflfidjlildciokgif?authuser=0&hl=en-GB" target="_blank" rel="noopener noreferrer" title="Chrome Web Store"><FiExternalLink /></a>
-                                <a href="https://github.com/yakovd33/message-via-whatsapp-chrome" target="_blank" rel="noopener noreferrer" title="GitHub Repository"><AiFillGithub /></a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
