@@ -34,6 +34,7 @@ const Services = () => {
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [canScrollPrev, setCanScrollPrev] = useState(false);
     const [canScrollNext, setCanScrollNext] = useState(true);
+    const [isMobile, setIsMobile] = useState(false);
 
     const onSelect = useCallback(() => {
         if (!emblaApi) return;
@@ -53,6 +54,17 @@ const Services = () => {
         };
     }, [emblaApi, onSelect]);
 
+    useEffect(() => {
+        const handleResize = () => {
+            if (typeof window === 'undefined') return;
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        handleResize();
+        window?.addEventListener('resize', handleResize);
+        return () => window?.removeEventListener('resize', handleResize);
+    }, []);
+
     const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
     const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
     const scrollTo = useCallback((index) => emblaApi && emblaApi.scrollTo(index), [emblaApi]);
@@ -67,15 +79,17 @@ const Services = () => {
                 </div>
 
                 <div className="services-carousel">
-                    <button
-                        type="button"
-                        className="services-nav prev"
-                        onClick={scrollPrev}
-                        aria-label="Previous services"
-                        disabled={!canScrollPrev}
-                    >
-                        <FiChevronLeft />
-                    </button>
+                    {!isMobile && (
+                        <button
+                            type="button"
+                            className="services-nav prev"
+                            onClick={scrollPrev}
+                            aria-label="Previous services"
+                            disabled={!canScrollPrev}
+                        >
+                            <FiChevronLeft />
+                        </button>
+                    )}
 
                     <div className="services-viewport" ref={emblaRef}>
                         <div className="services-track">
@@ -91,15 +105,17 @@ const Services = () => {
                         </div>
                     </div>
 
-                    <button
-                        type="button"
-                        className="services-nav next"
-                        onClick={scrollNext}
-                        aria-label="Next services"
-                        disabled={!canScrollNext}
-                    >
-                        <FiChevronRight />
-                    </button>
+                    {!isMobile && (
+                        <button
+                            type="button"
+                            className="services-nav next"
+                            onClick={scrollNext}
+                            aria-label="Next services"
+                            disabled={!canScrollNext}
+                        >
+                            <FiChevronRight />
+                        </button>
+                    )}
                 </div>
 
                 <div className="services-dots">
