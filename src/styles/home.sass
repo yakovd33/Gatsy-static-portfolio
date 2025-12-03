@@ -304,6 +304,77 @@
                 // filter: grayscale(100%) !important
                 transform: scale(1.1)
 
+        .extra-projects
+            max-height: 0
+            opacity: 0
+            overflow: hidden
+            transform: translateY(20px)
+            transition: max-height 0.55s ease, opacity 0.35s ease, transform 0.45s ease
+            &.open
+                max-height: 2000px
+                opacity: 1
+                transform: translateY(0)
+            .projects-list-item
+                margin-top: 40px
+
+    .load-more-wrapper
+        display: flex
+        justify-content: center
+        margin-top: 25px
+        margin-bottom: 10px
+
+    .load-more-projects
+        display: inline-flex
+        align-items: center
+        gap: 12px
+        padding: 14px 28px
+        border-radius: 999px
+        border: 1px solid #1f2a35
+        background: rgba(17, 21, 29, 0.85)
+        color: #d7fdf2
+        font-size: 0.82rem
+        letter-spacing: 0.08em
+        text-transform: uppercase
+        cursor: pointer
+        box-shadow: 0 8px 30px #00000035, inset 0 0 0 1px #0f151d
+        transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease
+        backdrop-filter: blur(6px)
+        .load-more-label
+            font-weight: 600
+            white-space: nowrap
+        .load-more-indicator
+            width: 34px
+            height: 34px
+            border-radius: 50%
+            border: 1px solid rgba(41, 236, 186, 0.4)
+            display: grid
+            place-items: center
+            position: relative
+            transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease
+            &::after
+                content: ''
+                width: 10px
+                height: 10px
+                border-right: 2px solid currentColor
+                border-bottom: 2px solid currentColor
+                transform: rotate(45deg)
+                transition: transform 0.25s ease
+        &:hover
+            background: #29ecba
+            color: #041015
+            transform: translateY(-2px)
+            box-shadow: 0 15px 40px #1dffcd40
+            .load-more-indicator
+                border-color: rgba(4, 16, 21, 0.4)
+                background: rgba(4, 16, 21, 0.1)
+        &.open
+            background: rgba(41, 236, 186, 0.15)
+            color: #29ecba
+            .load-more-indicator
+                transform: rotate(180deg)
+                &::after
+                    transform: rotate(225deg)
+
     // Mini projects (one-line items)
     #mini-projects
         display: flex

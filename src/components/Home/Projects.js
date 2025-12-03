@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ProjectListItem from './ProjectListItem';
 import { AiFillGithub } from 'react-icons/ai';
 import { FiExternalLink } from 'react-icons/fi';
 import { FaAppStore, FaGooglePlay } from 'react-icons/fa';
 
 const Projects = () => {
+    const [showMoreProjects, setShowMoreProjects] = useState(false);
+
     return ( 
         <div id="projects-section">
             <div className="container">
@@ -13,19 +15,18 @@ const Projects = () => {
 
                     <div id="projects-list">
                         <ProjectListItem
-                            img="/images/projects/superboker.jpg"
-                            title="Superboker"
-                            year={2025}
-                            reverse={ false }
+                            img="/images/projects/market.jpg"
+                            title="Market+"
+                            year={2022}
                             animate={true}
                             description={
                                 <>
-                                    An e-commerce web app for a morning delivery service.
+                                    Supermarket webapp I designed and built with <a href="https://nextjs.org/">Next.js</a> as the frontend framework and headless Wordpress as the CMS for product and orders management.
                                 </>
                             }
-                            mainLink={"http://superboker.co.il/"}
-                            tags={ [ 'React', 'Node.js', 'Express', 'Postgres', 'Vite', 'Tailwind.css'] }
-                            links={ [ { url: "http://superboker.co.il/", icon: <FiExternalLink/> } ] }
+                            tags={ [ 'Next.js', 'Wordpress', 'SASS', 'UI/UX' ] }
+                            mainLink="https://shuk-haikarim.com/"
+                            links={ [ { url: "https://shuk-haikarim.com/", icon: <FiExternalLink/> }, { url: "https://www.supermaimon.com/", icon: <FiExternalLink/> }, { url: "https://totseret-bait.com/", icon: <FiExternalLink/> } ] }
                         />
 
                         <ProjectListItem
@@ -61,53 +62,19 @@ const Projects = () => {
                         />
 
                         <ProjectListItem
-                            img="/images/projects/market.jpg"
-                            title="Market+"
-                            year={2022}
-                            animate={true}
-                            reverse={true}
-                            description={
-                                <>
-                                    Supermarket webapp I designed and built with <a href="https://nextjs.org/">Next.js</a> as the frontend framework and headless Wordpress as the CMS for product and orders management.
-                                </>
-                            }
-                            tags={ [ 'Next.js', 'Wordpress', 'SASS', 'UI/UX' ] }
-                            mainLink="https://shuk-haikarim.com/"
-                            links={ [ { url: "https://shuk-haikarim.com/", icon: <FiExternalLink/> }, { url: "https://www.supermaimon.com/", icon: <FiExternalLink/> }, { url: "https://totseret-bait.com/", icon: <FiExternalLink/> } ] }
-                        />
-
-                        <ProjectListItem
-                            img="/images/projects/bingetracker.mp4"
-                            type="video"
-                            title="BingeTracker"
-                            year={2021}
-                            description={
-                                <>
-                                    A TV and movie tracking webapp built with <a href="https://nextjs.org/">Next.js</a> and Node.js. Using IMDB and other API's to show and track every show and episode out there.
-                                </>
-                            }
-                            // height="20vw"
-                            // width="34vw"
-                            tags={ [ 'Next.js', 'Express.js', 'Postgres', 'TypeScript', 'UI/UX' ] }
-                            mainLink="https://binge-tracker.vercel.app/shows"
-                            links={ [ { url: "https://github.com/yakovd33/BingeTracker", icon: <AiFillGithub/> }, { url: "https://binge-tracker.vercel.app/shows", icon: <FiExternalLink/> } ] }
-                            reverse={ false }
-                        />
-
-                        <ProjectListItem
-                            img="/images/projects/alphadate.jpg"
-                            title="AlphaDate"
-                            year={2018}
-                            reverse={true}
+                            img="/images/projects/superboker.jpg"
+                            title="Superboker"
+                            year={2025}
+                            reverse={ true }
                             animate={true}
                             description={
                                 <>
-                                     A full feature dating website built with PHP. It has stories, feed with posts, likes and comments, messaging, Tinder style matching and ranking system, date management, flowers and more...
+                                    An e-commerce web app for a morning delivery service.
                                 </>
                             }
-                            tags={ [ 'PHP', 'handlebars.js', 'MySQL', 'Socket.io', 'UI/UX' ] }
-                            mainLink="http://alphadate.eropa.co.il/"
-                            links={ [ { url: "https://github.com/yakovd33/AlphaDate-Dating-Webapp-In-PHP", icon: <AiFillGithub/> }, { url: "http://alphadate.eropa.co.il/", icon: <FiExternalLink/> } ] }
+                            mainLink={"http://superboker.co.il/"}
+                            tags={ [ 'React', 'Node.js', 'Express', 'Postgres', 'Vite', 'Tailwind.css'] }
+                            links={ [ { url: "http://superboker.co.il/", icon: <FiExternalLink/> } ] }
                         />
 
                         <ProjectListItem
@@ -126,20 +93,55 @@ const Projects = () => {
                             links={ [ { url: "https://github.com/yakovd33/fruits-shop-react", icon: <AiFillGithub/> }, { url: "http://pryerek.co.il/", icon: <FiExternalLink/> } ] }
                         />
 
-                        {/* <ProjectListItem
-                            img="/images/projects/givergetter.jpg"
-                            title="Giver Getter"
-                            year={2020}
-                            reverse={true}
-                            description={
-                                <>
-                                     A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on <a href="#">Visual Studio Marketplace</a>, Package Control, <a href="#">Atom Package Manager</a>, and npm.
-                                </>
-                            }
-                            tags={ [ 'Next.js', 'Express.js', 'Node.js',  'Postgres', 'TypeScript', 'Socket.io' ] }
-                            mainLink="http://giver-getter.com/"
-                            links={ [ { url: "http://giver-getter.com/", icon: <FiExternalLink/> } ] }
-                        /> */}
+                        <div className={`extra-projects ${showMoreProjects ? 'open' : ''}`}>
+                            <ProjectListItem
+                                img="/images/projects/bingetracker.mp4"
+                                type="video"
+                                title="BingeTracker"
+
+                                year={2021}
+                                description={
+                                    <>
+                                        A TV and movie tracking webapp built with <a href="https://nextjs.org/">Next.js</a> and Node.js. Using IMDB and other API's to show and track every show and episode out there.
+                                    </>
+                                }
+                                // height="20vw"
+                                // width="34vw"
+                                tags={ [ 'Next.js', 'Express.js', 'Postgres', 'TypeScript', 'UI/UX' ] }
+                                mainLink="https://binge-tracker.vercel.app/shows"
+                                links={ [ { url: "https://github.com/yakovd33/BingeTracker", icon: <AiFillGithub/> }, { url: "https://binge-tracker.vercel.app/shows", icon: <FiExternalLink/> } ] }
+                                reverse={ false }
+                            />
+
+                            <ProjectListItem
+                                img="/images/projects/alphadate.jpg"
+                                title="AlphaDate"
+                                year={2018}
+                                reverse={true}
+                                animate={true}
+                                description={
+                                    <>
+                                         A full feature dating website built with PHP. It has stories, feed with posts, likes and comments, messaging, Tinder style matching and ranking system, date management, flowers and more...
+                                    </>
+                                }
+                                tags={ [ 'PHP', 'handlebars.js', 'MySQL', 'Socket.io', 'UI/UX' ] }
+                                mainLink="http://alphadate.eropa.co.il/"
+                                links={ [ { url: "https://github.com/yakovd33/AlphaDate-Dating-Webapp-In-PHP", icon: <AiFillGithub/> }, { url: "http://alphadate.eropa.co.il/", icon: <FiExternalLink/> } ] }
+                            />
+                        </div>
+                    </div>
+
+                    <div className="load-more-wrapper">
+                        <button
+                            type="button"
+                            className={`load-more-projects ${showMoreProjects ? 'open' : ''}`}
+                            onClick={() => setShowMoreProjects(!showMoreProjects)}
+                        >
+                            <span className="load-more-label">
+                                { showMoreProjects ? 'Show fewer projects' : 'Load more projects' }
+                            </span>
+                            <span className="load-more-indicator" aria-hidden="true"></span>
+                        </button>
                     </div>
 
                     {/* Small projects (one-line items) */}
