@@ -98,7 +98,7 @@ const Hero = () => {
                             I’m a fullstack developer and a programmer with a strong foundation in both front-end and back-end technologies. I am a detail-oriented problem solver experienced in creating fullstack applications and software and enjoy working on projects from conception to deployment. With a passion for building intuitive and user-friendly websites and applications. I am constantly learning and staying up-to-date with the latest development trends and best practices.
                         </div>
                         <div id="hero-buttons">
-                            <a href="#" className="hero-btn active">CONTACT ME</a>
+                            <a href="#contact-wrap" className="hero-btn active">CONTACT ME</a>
                             <a href="/Yakov Shitrit CV.pdf" target="_blank" className="hero-btn">MY RESUME <BiPlay/></a>
                         </div>
                     </div>
