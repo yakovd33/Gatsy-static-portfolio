@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ProjectListItem from './ProjectListItem';
 import { AiFillGithub } from 'react-icons/ai';
 import { FiExternalLink } from 'react-icons/fi';
@@ -23,9 +23,75 @@ const miniProjects = [
 
 const Projects = () => {
     const [showMoreProjects, setShowMoreProjects] = useState(false);
+    const [avatarProgress, setAvatarProgress] = useState(0);
+    const [isAvatarVisible, setIsAvatarVisible] = useState(false);
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+        if (typeof window === 'undefined') {
+            return undefined;
+        }
+
+        const revealStart = 500; // px scrolled inside the section before showing the avatar
+        const revealDistance = 10; // px range to fully reveal the avatar after the start point
+
+        const calculateProgress = () => {
+            const sectionEl = sectionRef.current;
+            if (!sectionEl) return;
+
+            const scrollY = window.scrollY || window.pageYOffset || 0;
+            const sectionTop = sectionEl.offsetTop;
+            const sectionHeight = sectionEl.offsetHeight;
+            const distanceInside = Math.min(Math.max(scrollY - sectionTop, 0), sectionHeight);
+            const rawProgress = (distanceInside - revealStart) / revealDistance;
+            const clampedProgress = Math.min(Math.max(rawProgress, 0), 1);
+
+            if (scrollY > sectionTop - revealStart) {
+                setIsAvatarVisible(true);
+            } else {
+                setIsAvatarVisible(false);
+            }
+
+            setAvatarProgress(clampedProgress);
+        };
+
+        let ticking = false;
+        const handleScroll = () => {
+            if (ticking) return;
+            ticking = true;
+            window.requestAnimationFrame(() => {
+                calculateProgress();
+                ticking = false;
+            });
+        };
+
+        calculateProgress();
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        window.addEventListener('resize', calculateProgress);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', calculateProgress);
+        };
+    }, []);
 
     return ( 
-        <div id="projects-section">
+        <div id="projects-section" ref={sectionRef}>
+            <div className={`projects-avatar`}>
+                <div className="projects-avatar-floating">
+                    <div className={`projects-avatar-img ${isAvatarVisible ? 'visible' : ''}`}>
+                        <img
+                            src="/images/avatar.png"
+                            alt="Illustrated avatar waving hello"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div className={`projects-avatar-bubble ${isAvatarVisible ? 'visible' : ''}`}>
+                        <span>Sup, lets talk.</span>
+                    </div>
+                </div>
+            </div>
             <div className="container">
                 <div id="project-list-container">
                     <h2 className="cute-title"><span>01.</span> Some Things I’ve Built</h2>
