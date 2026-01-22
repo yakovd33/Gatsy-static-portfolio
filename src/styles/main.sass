@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;500;600;900&display=swap')
 
 // Variables
-$base-color: #2afdc7
+$base-color-static: #c9f31d
+$base-color-target: #29ecba
+$base-color: var(--base-color)
 $medium: 1440px
 $small: 768px
 $border-radius: 4px
@@ -11,6 +13,21 @@ $black-box-shadow: 0 0 13px rgba(0, 0, 0, 0.7)
 $transition: 0.3s ease-in-out
 $dark-blue: #141b26
 $darker-blue: #0f151e
+
+@function base-color-alpha($alpha)
+    @return color-mix(in srgb, var(--base-color) #{percentage($alpha)}, transparent)
+
+@property --base-color
+    syntax: '<color>'
+    inherits: true
+    initial-value: #{$base-color-static}
+
+// Animated base color that oscillates between launch and legacy accents
+@keyframes base-color-pulse
+    0%
+        --base-color: #{$base-color-static}
+    100%
+        --base-color: #{$base-color-target}
 
 *
     padding: 0
@@ -50,9 +67,11 @@ a
         left: 100%
         margin-left: 20px
 
-//  Scrollbar
+//  Scrollbar + animated accent color
 :root
-    --base: #{$base-color}
+    --base-color: #{$base-color-static}
+    --base: var(--base-color)
+    animation: base-color-pulse 14s ease-in-out infinite alternate
 
 ::-webkit-scrollbar
     width: 4px

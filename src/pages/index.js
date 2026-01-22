@@ -31,7 +31,7 @@ const IndexPage = () => {
 
 			{ !didLoad &&
 				<div id="website-loading-animation">
-					<Triangle color="#29ecba" height={80} width={80} />
+					<Triangle color="var(--base-color)" height={80} width={80} />
 				</div>
 			}
 
