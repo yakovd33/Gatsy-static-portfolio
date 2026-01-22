@@ -78,7 +78,9 @@ const Projects = () => {
 
     return ( 
         <div id="projects-section" ref={sectionRef}>
-            <div className={`projects-avatar`}>
+            <div
+                className={`projects-avatar`}
+            >
                 <div className="projects-avatar-floating">
                     <div className={`projects-avatar-img ${isAvatarVisible ? 'visible' : ''}`}>
                         <img
@@ -93,7 +95,7 @@ const Projects = () => {
                 </div>
             </div>
             <div className="container">
-                <div id="project-list-container">
+                <div id="project-list-container" data-aos="fade-up" data-aos-duration="700">
                     <h2 className="cute-title"><span>01.</span> Some Things I’ve Built</h2>
 
                     <div id="projects-list">
@@ -102,6 +104,7 @@ const Projects = () => {
                             title="Market+"
                             year={2022}
                             animate={true}
+                            aosDelay={0}
                             description={
                                 <>
                                     Supermarket webapp I designed and built with <a href="https://nextjs.org/">Next.js</a> as the frontend framework and headless Wordpress as the CMS for product and orders management.
@@ -118,6 +121,7 @@ const Projects = () => {
                             year={2024}
                             reverse={ true }
                             animate={true}
+                            aosDelay={120}
                             description={
                                 <>
                                     An IOS/Android app portal designed for girls looking for beauty and cosmetic services near them.
@@ -134,6 +138,7 @@ const Projects = () => {
                             year={2023}
                             reverse={ false }
                             animate={true}
+                            aosDelay={200}
                             description={
                                 <>
                                     A no-code application used for planning and running complex Arduino sequences on the browser without a line of code.
@@ -150,6 +155,7 @@ const Projects = () => {
                             year={2025}
                             reverse={ true }
                             animate={true}
+                            aosDelay={280}
                             description={
                                 <>
                                     An e-commerce web app for a morning delivery service.
@@ -166,6 +172,7 @@ const Projects = () => {
                             animate={true}
                             year={2021}
                             reverse={false}
+                            aosDelay={360}
                             description={
                                 <>
                                      An online ecommerce website with a full feature admin panel designed and built by me.
@@ -183,6 +190,8 @@ const Projects = () => {
                                 title="BingeTracker"
                                 reverse={true}
                                 year={2021}
+                                animate={true}
+                                aosDelay={0}
                                 description={
                                     <>
                                         A TV and movie tracking webapp built with <a href="https://nextjs.org/">Next.js</a> and Node.js. Using IMDB and other API's to show and track every show and episode out there.
@@ -200,6 +209,7 @@ const Projects = () => {
                                 title="AlphaDate"
                                 year={2018}
                                 animate={true}
+                                aosDelay={150}
                                 description={
                                     <>
                                          A full feature dating website built with PHP. It has stories, feed with posts, likes and comments, messaging, Tinder style matching and ranking system, date management, flowers and more...
@@ -225,12 +235,18 @@ const Projects = () => {
                         </button>
                     </div>
 
-                        <h4 className="mini-projects-title">
+                        <h4 className="mini-projects-title" data-aos="fade-up" data-aos-offset="160">
                             Small Projects — Chrome Extensions
                         </h4>
                         <div id="mini-projects">
-                            {miniProjects.map((project) => (
-                                <div className="mini-project" key={project.title}>
+                            {miniProjects.map((project, index) => (
+                                <div
+                                    className="mini-project"
+                                    key={project.title}
+                                    data-aos="fade-up"
+                                    data-aos-delay={`${160 + index * 120}`}
+                                    data-aos-anchor="#mini-projects"
+                                >
                                     <a
                                         href={project.link}
                                         target="_blank"

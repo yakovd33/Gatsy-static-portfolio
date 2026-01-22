@@ -4,7 +4,11 @@ import { FiDownload } from 'react-icons/fi'
 const SmallContactBox = () => {
   return (
     <div id="small-contact-box-wrap" className="container">
-        <div id="small-contact-box">
+      <div
+        id="small-contact-box"
+        data-aos="zoom-in"
+        data-aos-offset="200"
+      >
             <div id="small-contact-box-left">
                 <div id="small-contact-box-text">Seem to like my work so far?<br/>Would you like to work with me?</div>
             </div>

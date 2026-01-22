@@ -72,7 +72,7 @@ const Services = () => {
     return (
         <section id="services-section">
             <div className="container">
-                <div className="services-header">
+                <div className="services-header" data-aos="fade-up">
                     <p className="section-eyebrow"><span>02.</span> How I Can Help</p>
                     <h2>Services tailored for complete builds</h2>
                     <p className="services-intro">From idea validation to launch and post-release support, I cover every step so you can stay focused on the business.</p>
@@ -94,7 +94,13 @@ const Services = () => {
                     <div className="services-viewport" ref={emblaRef}>
                         <div className="services-track">
                             {services.map((service, index) => (
-                                <article className="service-card" key={service.title}>
+                                <article
+                                    className="service-card"
+                                    key={service.title}
+                                    data-aos="fade-up"
+                                    data-aos-delay={`${200 + index * 100}`}
+                                    data-aos-anchor="#services-section"
+                                >
                                     <div className="service-card-head">
                                         <span className="service-index">0{index + 1}</span>
                                         <h3>{service.title}</h3>
@@ -118,7 +124,7 @@ const Services = () => {
                     )}
                 </div>
 
-                <div className="services-dots">
+                <div className="services-dots" data-aos="zoom-in" data-aos-delay="220">
                     {services.map((service, index) => (
                         <button
                             key={service.title}

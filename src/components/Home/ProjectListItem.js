@@ -1,8 +1,13 @@
 import React from 'react'
 
-const ProjectListItem = ({ reverse, img, title, description, tags, links, year, type = "image", height = 'auto', width = 'auto', animate = false, mainLink = null }) => {
+const ProjectListItem = ({ reverse, img, title, description, tags, links, year, type = "image", height = 'auto', width = 'auto', animate = false, mainLink = null, aosDelay = 0 }) => {
+    const aosDirection = animate ? (reverse ? 'fade-left' : 'fade-right') : undefined;
     return (
-        <div className={ `projects-list-item ${ reverse ? 'reverse' : '' } ${animate ? 'animate' : ''}` }>
+        <div
+            className={ `projects-list-item ${ reverse ? 'reverse' : '' } ${animate ? 'animate' : ''}` }
+            data-aos={aosDirection}
+            data-aos-delay={animate ? aosDelay : undefined}
+        >
         <div className="project-item-right">
             <h6 className="project-megatitle">Featured Project</h6>
             <h3 className="project-title">{ title }</h3>

@@ -68,7 +68,11 @@ const Hero = () => {
         <div id="hero-section">
             <div className="container">
                 <div id="hero-section-content">
-                    <div id="hero-section-textuals">
+                    <div
+                        id="hero-section-textuals"
+                        data-aos="fade-up"
+                        data-aos-delay="150"
+                    >
 
                         <div className="cursor"></div>
 
